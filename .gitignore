@@ -348,3 +348,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Bundles and Installer
+Bundle
+Installer/*.back.aip
+Installer/Export Schedule-cache/*
+Installer/Export Schedule-SetupFiles/*

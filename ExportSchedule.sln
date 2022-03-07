@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49481FD9-8BC8-463B-AA0E-FE03582C461C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExportSchedule", "ExportSchedule\ExportSchedule.csproj", "{82E9F379-733E-4305-9B19-9C572C4D95D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		2018|x64 = 2018|x64
+		2019|x64 = 2019|x64
+		2020|x64 = 2020|x64
+		2021|x64 = 2021|x64
+		2022|x64 = 2022|x64
+		2023|x64 = 2023|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2018|x64.ActiveCfg = 2018|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2018|x64.Build.0 = 2018|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2019|x64.ActiveCfg = 2019|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2019|x64.Build.0 = 2019|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2020|x64.ActiveCfg = 2020|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2020|x64.Build.0 = 2020|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2021|x64.ActiveCfg = 2021|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2021|x64.Build.0 = 2021|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2022|x64.ActiveCfg = 2022|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2022|x64.Build.0 = 2022|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2023|x64.ActiveCfg = 2023|x64
+		{82E9F379-733E-4305-9B19-9C572C4D95D2}.2023|x64.Build.0 = 2023|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EC95639-8D94-41CC-A86B-ECC49522CB12}
+	EndGlobalSection
+EndGlobal

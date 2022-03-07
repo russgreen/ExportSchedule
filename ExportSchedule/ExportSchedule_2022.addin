@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Export Schedule</Name>
+    <Assembly>D:\Development\Source\Repos\Archisoft Tools\ExportSchedule\bin\2022\ExportSchedule.dll</Assembly>
+    <ClientId>a6ab7dcc-86be-4c58-bd43-45055d0c9227</ClientId>
+    <FullClassName>ExportSchedule.App</FullClassName>
+    <VendorId>ARBG</VendorId>
+    <VisibilityMode>NotVisibleInFamily</VisibilityMode>
+    <VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+  </AddIn>
+</RevitAddIns>

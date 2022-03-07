@@ -6,4 +6,4 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/russgreen/ExportSchedule)
 
 # ExportSchedule
-About Export an open schedule from Autodesk® Revit® direct to Microsoft Excel either in XLXS formats from an open schedule view.
+Export an open schedule from Autodesk® Revit® directly to Microsoft Excel XLXS format from an open schedule view.

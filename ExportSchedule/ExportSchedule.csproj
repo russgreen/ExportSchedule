@@ -4,7 +4,7 @@
     <Configurations>2018;2019;2020;2021;2022;2023</Configurations>
     <Description>Export Revit Schedule to Excel</Description>
     <Copyright>Copyright © Russell Green</Copyright>
-    <Version>2.1.1</Version>
+    <Version>2.1</Version>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 

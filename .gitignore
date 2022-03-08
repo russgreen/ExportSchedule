@@ -352,5 +352,5 @@ MigrationBackup/
 # Bundles and Installer
 Bundle
 Installer/*.back.aip
-Installer/Export Schedule-cache/*
-Installer/Export Schedule-SetupFiles/*
+Installer/ExportSchedule-cache/*
+Installer/ExportSchedule-SetupFiles/*

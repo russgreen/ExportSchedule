@@ -2,7 +2,7 @@
 <RevitAddIns>
   <AddIn Type="Application">
     <Name>Export Schedule</Name>
-    <Assembly>ExportSchedule.dll</Assembly>
+    <Assembly>ExportSchedule/ExportSchedule.dll</Assembly>
     <ClientId>a6ab7dcc-86be-4c58-bd43-45055d0c9227</ClientId>
     <FullClassName>ExportSchedule.App</FullClassName>
     <VendorId>ARBG</VendorId>

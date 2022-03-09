@@ -9,5 +9,5 @@
 # ExportSchedule
 Export an open schedule from Revit directly to Microsoft Excel XLXS format from an open schedule view.
 
-# Known Issues
+## Known Issues
 Formatting of cell boundaries is not supported at this time.

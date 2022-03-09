@@ -2,8 +2,12 @@
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue.svg)
 ![.NET](https://img.shields.io/badge/.NET-4.6.1_--_4.8-blue.svg)
 [![License](http://img.shields.io/:License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+[![AppStore](https://img.shields.io/badge/Autodesk-AppStore-blue)](https://apps.autodesk.com/RVT/en/Detail/Index?id=145809310848075304&appLang=en&os=Win64)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/russgreen/ExportSchedule)
 
 # ExportSchedule
-Export an open schedule from Autodesk® Revit® directly to Microsoft Excel XLXS format from an open schedule view.
+Export an open schedule from Revit directly to Microsoft Excel XLXS format from an open schedule view.
+
+# Known Issues
+Formatting of cell boundaries is not supported at this time.

@@ -12,7 +12,8 @@ namespace ExportSchedule;
 class App : IExternalApplication
 {
     public static UIControlledApplication cachedUiCtrApp;
-
+    private readonly string _tabName = "RG Tools";
+    
     public Result OnShutdown(UIControlledApplication application)
     {
         return Result.Succeeded;
@@ -30,10 +31,10 @@ class App : IExternalApplication
     {
         RibbonPanel panel;
 
-        // Check if "Archisoft Tools" already exists and use if its there
+        // Check if "RG Tools" already exists and use if its there
         try
         {
-            panel = cachedUiCtrApp.CreateRibbonPanel("Archisoft Tools", Guid.NewGuid().ToString());
+            panel = cachedUiCtrApp.CreateRibbonPanel(_tabName, Guid.NewGuid().ToString());
             panel.Name = "ARBG_ExpSched_ExtApp";
             panel.Title = "Export Schedule";
         }
@@ -50,13 +51,19 @@ class App : IExternalApplication
                         archisoftPanel = true;
                         break;
                     }
+                    
+                   if (folder.ToLower().Contains("rg") == true & folder.ToLower().Contains("rg exportschedule") == false)
+                    {
+                        archisoftPanel = true;
+                        break;
+                    }                   
                 }
             }
 
             if (archisoftPanel == true)
             {
-                cachedUiCtrApp.CreateRibbonTab("Archisoft Tools");
-                panel = cachedUiCtrApp.CreateRibbonPanel("Archisoft Tools", Guid.NewGuid().ToString());
+                cachedUiCtrApp.CreateRibbonTab(_tabName);
+                panel = cachedUiCtrApp.CreateRibbonPanel(_tabName, Guid.NewGuid().ToString());
                 panel.Name = "ARBG_ExpSched_ExtApp";
                 panel.Title = "Export Schedule";
             }

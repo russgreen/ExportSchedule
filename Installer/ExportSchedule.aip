@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="19.1" version="19.1" Modules="simple" RootPath="." Language="en" Id="{5916C2D6-3FA4-4F34-99C8-C6302DB4726B}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="20.3.2" version="20.3.2" Modules="simple" RootPath="." Language="en_GB" Id="{EA0754B8-8E7B-45CE-A7E8-11C02D7FCD10}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
-    <ROW Property="AI_CURRENT_YEAR" Value="2022" ValueLocId="-"/>
+    <ROW Property="AI_CURRENT_YEAR" Value="2023" ValueLocId="-"/>
+    <ROW Property="AI_PACKAGING_TOOL" Value="Advanced Installer 20.3.2 build 850835f9" ValueLocId="-"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPPRODUCTICON" Value="ExportSchedule.exe" Type="8"/>
     <ROW Property="Manufacturer" Value="Russell Green"/>
-    <ROW Property="ProductCode" Value="1033:{C21C2CBF-E78A-4B5D-8886-24D91A84AA4E} " Type="16"/>
+    <ROW Property="ProductCode" Value="2057:{F3F2CB1C-8C56-48C0-A625-F0949167A86E} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Export Schedule"/>
-    <ROW Property="ProductVersion" Value="2.1" Type="32"/>
+    <ROW Property="ProductVersion" Value="2.1"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
-    <ROW Property="UpgradeCode" Value="{F04F085F-5478-481E-B50C-946A19EEF10F}"/>
+    <ROW Property="UpgradeCode" Value="{1F2B5E7D-7896-4D2D-86E6-8779EF3F7652}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
@@ -25,104 +29,78 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
     <ROW Directory="Addins_Dir" Directory_Parent="Revit_Dir" DefaultDir="Addins"/>
-    <ROW Directory="ApplicationPlugins_Dir" Directory_Parent="Autodesk_Dir" DefaultDir="APPLIC~1|ApplicationPlugins"/>
     <ROW Directory="Autodesk_Dir" Directory_Parent="CommonAppDataFolder" DefaultDir="Autodesk"/>
     <ROW Directory="CommonAppDataFolder" Directory_Parent="TARGETDIR" DefaultDir="COMMON~1|CommonAppDataFolder" IsPseudoRoot="1"/>
-    <ROW Directory="ExportSchedule_1_Dir" Directory_Parent="__Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
-    <ROW Directory="ExportSchedule_2_Dir" Directory_Parent="__1_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
-    <ROW Directory="ExportSchedule_3_Dir" Directory_Parent="__2_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
-    <ROW Directory="ExportSchedule_4_Dir" Directory_Parent="__3_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
-    <ROW Directory="ExportSchedule_5_Dir" Directory_Parent="__4_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
-    <ROW Directory="ExportSchedule_Dir" Directory_Parent="__5_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
+    <ROW Directory="ExportSchedule_1_Dir" Directory_Parent="__1_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
+    <ROW Directory="ExportSchedule_2_Dir" Directory_Parent="__2_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
+    <ROW Directory="ExportSchedule_3_Dir" Directory_Parent="__3_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
+    <ROW Directory="ExportSchedule_Dir" Directory_Parent="__Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
     <ROW Directory="Revit_Dir" Directory_Parent="Autodesk_Dir" DefaultDir="Revit"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
-    <ROW Directory="__1_Dir" Directory_Parent="Addins_Dir" DefaultDir="2020"/>
-    <ROW Directory="__2_Dir" Directory_Parent="Addins_Dir" DefaultDir="2021"/>
-    <ROW Directory="__3_Dir" Directory_Parent="Addins_Dir" DefaultDir="2022"/>
-    <ROW Directory="__4_Dir" Directory_Parent="Addins_Dir" DefaultDir="2023"/>
-    <ROW Directory="__5_Dir" Directory_Parent="Addins_Dir" DefaultDir="2018"/>
-    <ROW Directory="__Dir" Directory_Parent="Addins_Dir" DefaultDir="2019"/>
+    <ROW Directory="__1_Dir" Directory_Parent="Addins_Dir" DefaultDir="2021"/>
+    <ROW Directory="__2_Dir" Directory_Parent="Addins_Dir" DefaultDir="2022"/>
+    <ROW Directory="__3_Dir" Directory_Parent="Addins_Dir" DefaultDir="2023"/>
+    <ROW Directory="__Dir" Directory_Parent="Addins_Dir" DefaultDir="2020"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="APPDIR" ComponentId="{CC55D69B-B55D-4D44-8907-996229B4E66B}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="ApplicationPlugins" ComponentId="{E26C2BF0-EA22-40D4-B295-F24B60F55CE0}" Directory_="ApplicationPlugins_Dir" Attributes="0"/>
-    <ROW Component="EPPlus.dll" ComponentId="{D71353A6-ABEF-4C05-821E-F4A09C0D7C6B}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="EPPlus.dll"/>
-    <ROW Component="EPPlus.dll_1" ComponentId="{1BA125CA-F860-4E8E-8031-59125B0FA00B}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="EPPlus.dll_1"/>
-    <ROW Component="EPPlus.dll_2" ComponentId="{9232FF70-D0FB-452C-9BB9-204D2314CF09}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="EPPlus.dll_2"/>
-    <ROW Component="EPPlus.dll_3" ComponentId="{2F8ADD60-0E18-49E4-B4FE-111406674927}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="EPPlus.dll_3"/>
-    <ROW Component="EPPlus.dll_4" ComponentId="{0332CA8D-CA0C-495C-A49D-059023EB0B0B}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="EPPlus.dll_4"/>
-    <ROW Component="EPPlus.dll_5" ComponentId="{3722FBA2-046D-4720-9A92-DF53F6A6E761}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="EPPlus.dll_5"/>
-    <ROW Component="ExportSchedule.addin" ComponentId="{5EAAE4FB-2B8B-48ED-A94D-BF60FF03297C}" Directory_="__Dir" Attributes="0" KeyPath="ExportSchedule.addin" Type="0"/>
-    <ROW Component="ExportSchedule.addin_1" ComponentId="{F5500DCA-C43E-4443-980D-6B8A89081D26}" Directory_="__1_Dir" Attributes="0" KeyPath="ExportSchedule.addin_1" Type="0"/>
-    <ROW Component="ExportSchedule.addin_2" ComponentId="{08FC7B1C-E032-4FFC-B5E2-A6AE2B374BDC}" Directory_="__2_Dir" Attributes="0" KeyPath="ExportSchedule.addin_2" Type="0"/>
-    <ROW Component="ExportSchedule.addin_3" ComponentId="{4BFD229C-D632-45D5-98F4-64CA31A43B99}" Directory_="__3_Dir" Attributes="0" KeyPath="ExportSchedule.addin_3" Type="0"/>
-    <ROW Component="ExportSchedule.addin_4" ComponentId="{27F656E1-4B59-4ADE-BEBB-A5CA4A1B9211}" Directory_="__4_Dir" Attributes="0" KeyPath="ExportSchedule.addin_4" Type="0"/>
-    <ROW Component="ExportSchedule.dll" ComponentId="{8EAC0566-8A85-49F5-90CD-2C7D97364D77}" Directory_="ExportSchedule_Dir" Attributes="256" KeyPath="ExportSchedule.dll"/>
-    <ROW Component="ExportSchedule.dll_1" ComponentId="{7BEC9BA6-ED5A-4A86-A406-556CDE4D20B7}" Directory_="ExportSchedule_1_Dir" Attributes="256" KeyPath="ExportSchedule.dll_1"/>
-    <ROW Component="ExportSchedule.dll_2" ComponentId="{504FFEA0-F1B6-4D2D-98D0-8B9DFC3053EE}" Directory_="ExportSchedule_2_Dir" Attributes="256" KeyPath="ExportSchedule.dll_2"/>
-    <ROW Component="ExportSchedule.dll_3" ComponentId="{36B97E46-575A-440F-B546-1BE96BC2A421}" Directory_="ExportSchedule_3_Dir" Attributes="256" KeyPath="ExportSchedule.dll_3"/>
-    <ROW Component="ExportSchedule.dll_4" ComponentId="{57423565-9E00-4463-8598-83566DF1A615}" Directory_="ExportSchedule_4_Dir" Attributes="256" KeyPath="ExportSchedule.dll_4"/>
-    <ROW Component="ExportSchedule.dll_5" ComponentId="{3BCC7D32-2F2A-494E-B87A-354320655B95}" Directory_="ExportSchedule_5_Dir" Attributes="256" KeyPath="ExportSchedule.dll_5"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll" ComponentId="{D17DA8F7-922D-49D2-A1E9-5ACC1CB37E00}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_1" ComponentId="{4C181C9E-D05E-42EC-A1FA-BB2EAB4F0365}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_1"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_2" ComponentId="{15E1D97A-1343-4589-8CD7-2A30D80B151F}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_2"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_3" ComponentId="{F47DCF46-2B3B-4A72-A1DD-2C33F68175AB}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_3"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_4" ComponentId="{3F84E274-3110-4DFD-BAC9-5CDEC2545A96}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_4"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_5" ComponentId="{15B07EC9-F966-4914-94EA-AFA547B8343E}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_5"/>
-    <ROW Component="ProductInformation" ComponentId="{A45F939A-A1D5-4C15-8D1F-55EA1FF9901F}" Directory_="APPDIR" Attributes="260" KeyPath="Version"/>
-    <ROW Component="System.ComponentModel.Annotations.dll" ComponentId="{74BE7FFA-DBC1-4D1C-B194-D467F61093EB}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll"/>
-    <ROW Component="System.ComponentModel.Annotations.dll_1" ComponentId="{881CA645-7D08-4FE1-86D3-04CA6CDAD4D6}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll_1"/>
-    <ROW Component="System.ComponentModel.Annotations.dll_2" ComponentId="{935CA626-F230-4790-A2FC-2E5B9929C05D}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll_2"/>
-    <ROW Component="System.ComponentModel.Annotations.dll_3" ComponentId="{036F9038-CA10-4BB6-87C0-0F3355151270}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll_3"/>
-    <ROW Component="System.ComponentModel.Annotations.dll_4" ComponentId="{CAFDF82C-01E1-4C6D-B271-79E1C8690CF8}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll_4"/>
-    <ROW Component="System.ComponentModel.Annotations.dll_5" ComponentId="{96D933D2-F81D-4EEC-AD1D-F9501EFCFF64}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll_5"/>
-    <ROW Component="Warnings.addin" ComponentId="{3DAEA130-87C3-4F5A-AE82-1C0ADE663E80}" Directory_="__5_Dir" Attributes="0" KeyPath="ExportSchedule.addin_5" Type="0"/>
+    <ROW Component="APPDIR" ComponentId="{DEAD45F4-5991-49CA-ADDF-ACE6CE6A3433}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="EPPlus.dll" ComponentId="{CF185983-8320-42B1-86F8-8896189C31DF}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="EPPlus.dll"/>
+    <ROW Component="EPPlus.dll_1" ComponentId="{08D765A2-B268-4206-8942-57E3D2D5C9E3}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="EPPlus.dll_1"/>
+    <ROW Component="EPPlus.dll_2" ComponentId="{2E586F15-64CC-4799-981D-CA803731EDF2}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="EPPlus.dll_2"/>
+    <ROW Component="EPPlus.dll_3" ComponentId="{31611DB8-5E1B-434C-B890-12F43992F56B}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="EPPlus.dll_3"/>
+    <ROW Component="ExportSchedule.addin" ComponentId="{E35D2D66-3DAF-4E4C-A7DF-FD66BDE333A9}" Directory_="__3_Dir" Attributes="0" KeyPath="ExportSchedule.addin" Type="0"/>
+    <ROW Component="ExportSchedule.addin_1" ComponentId="{D40CF210-807A-4224-B15F-2FBF8FDD09D0}" Directory_="__2_Dir" Attributes="0" KeyPath="ExportSchedule.addin_1" Type="0"/>
+    <ROW Component="ExportSchedule.addin_2" ComponentId="{8DAB7B29-9131-4C67-B550-E585A17B4B76}" Directory_="__1_Dir" Attributes="0" KeyPath="ExportSchedule.addin_2" Type="0"/>
+    <ROW Component="ExportSchedule.addin_3" ComponentId="{1A4E5978-2743-49AF-A07E-EAF979C8D4A9}" Directory_="__Dir" Attributes="0" KeyPath="ExportSchedule.addin_3" Type="0"/>
+    <ROW Component="ExportSchedule.dll" ComponentId="{8A373AA9-E476-499D-976E-2769B5370500}" Directory_="ExportSchedule_Dir" Attributes="256" KeyPath="ExportSchedule.dll"/>
+    <ROW Component="ExportSchedule.dll_1" ComponentId="{0F25E281-88BB-40E3-A184-E0D587967BDD}" Directory_="ExportSchedule_1_Dir" Attributes="256" KeyPath="ExportSchedule.dll_1"/>
+    <ROW Component="ExportSchedule.dll_2" ComponentId="{00E56C7E-C4CC-4F74-B720-AEBE8C942074}" Directory_="ExportSchedule_2_Dir" Attributes="256" KeyPath="ExportSchedule.dll_2"/>
+    <ROW Component="ExportSchedule.dll_3" ComponentId="{F3716993-4800-485A-B3FA-F125746C6CEF}" Directory_="ExportSchedule_3_Dir" Attributes="256" KeyPath="ExportSchedule.dll_3"/>
+    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll" ComponentId="{4E2D95FA-56A2-4C13-8DF2-59F4E8ECB089}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll"/>
+    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_1" ComponentId="{18C1F77B-3942-4B61-BB82-CA6F27D72635}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_1"/>
+    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_2" ComponentId="{2569A798-EACA-4FA5-8545-347EB703457E}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_2"/>
+    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_3" ComponentId="{79905542-D49E-4257-9281-5F257977EBBA}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_3"/>
+    <ROW Component="ProductInformation" ComponentId="{730984FF-300C-4695-B2D7-8DCC14B8B77F}" Directory_="APPDIR" Attributes="260" KeyPath="Version"/>
+    <ROW Component="System.ComponentModel.Annotations.dll" ComponentId="{5B129E6D-F629-4770-A644-5B981CD10A70}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll"/>
+    <ROW Component="System.ComponentModel.Annotations.dll_1" ComponentId="{B06F2352-ABAD-4A1B-82D8-147E6776CEBB}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll_1"/>
+    <ROW Component="System.ComponentModel.Annotations.dll_2" ComponentId="{F5BDFDE7-9042-4D39-B69A-2C37B68A28A0}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll_2"/>
+    <ROW Component="System.ComponentModel.Annotations.dll_3" ComponentId="{4BE09666-0FCB-4194-A891-4B4E13496586}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="System.ComponentModel.Annotations.dll_3"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="EPPlus.dll" Component_="EPPlus.dll" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2020\EPPlus.dll" SelfReg="false"/>
+    <ROW File="ExportSchedule.dll" Component_="ExportSchedule.dll" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2020\ExportSchedule.dll" SelfReg="false"/>
+    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll" Component_="Microsoft.IO.RecyclableMemoryStream.dll" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2020\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.Annotations.dll" Component_="System.ComponentModel.Annotations.dll" FileName="SYSTEM~1.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2020\System.ComponentModel.Annotations.dll" SelfReg="false"/>
+    <ROW File="ExportSchedule.dll_1" Component_="ExportSchedule.dll_1" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2021\ExportSchedule.dll" SelfReg="false"/>
+    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_1" Component_="Microsoft.IO.RecyclableMemoryStream.dll_1" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2021\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.Annotations.dll_1" Component_="System.ComponentModel.Annotations.dll_1" FileName="SYSTEM~1.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2021\System.ComponentModel.Annotations.dll" SelfReg="false"/>
+    <ROW File="EPPlus.dll_1" Component_="EPPlus.dll_1" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2021\EPPlus.dll" SelfReg="false"/>
+    <ROW File="ExportSchedule.dll_2" Component_="ExportSchedule.dll_2" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2022\ExportSchedule.dll" SelfReg="false"/>
+    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_2" Component_="Microsoft.IO.RecyclableMemoryStream.dll_2" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2022\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.Annotations.dll_2" Component_="System.ComponentModel.Annotations.dll_2" FileName="SYSTEM~1.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2022\System.ComponentModel.Annotations.dll" SelfReg="false"/>
+    <ROW File="EPPlus.dll_2" Component_="EPPlus.dll_2" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2022\EPPlus.dll" SelfReg="false"/>
+    <ROW File="ExportSchedule.dll_3" Component_="ExportSchedule.dll_3" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2023\ExportSchedule.dll" SelfReg="false"/>
+    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_3" Component_="Microsoft.IO.RecyclableMemoryStream.dll_3" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2023\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.Annotations.dll_3" Component_="System.ComponentModel.Annotations.dll_3" FileName="SYSTEM~1.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2023\System.ComponentModel.Annotations.dll" SelfReg="false"/>
+    <ROW File="EPPlus.dll_3" Component_="EPPlus.dll_3" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2023\EPPlus.dll" SelfReg="false"/>
+    <ROW File="ExportSchedule.addin" Component_="ExportSchedule.addin" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\bin\2023\ExportSchedule.addin" SelfReg="false"/>
+    <ROW File="ExportSchedule.addin_1" Component_="ExportSchedule.addin_1" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\bin\2022\ExportSchedule.addin" SelfReg="false"/>
     <ROW File="ExportSchedule.addin_2" Component_="ExportSchedule.addin_2" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\bin\2021\ExportSchedule.addin" SelfReg="false"/>
-    <ROW File="ExportSchedule.addin_3" Component_="ExportSchedule.addin_3" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\bin\2022\ExportSchedule.addin" SelfReg="false"/>
-    <ROW File="ExportSchedule.addin_4" Component_="ExportSchedule.addin_4" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\bin\2023\ExportSchedule.addin" SelfReg="false"/>
-    <ROW File="ExportSchedule.addin_5" Component_="Warnings.addin" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\bin\2018\ExportSchedule.addin" SelfReg="false"/>
-    <ROW File="ExportSchedule.dll" Component_="ExportSchedule.dll" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2018\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll" Component_="Microsoft.IO.RecyclableMemoryStream.dll" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2018\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="System.ComponentModel.Annotations.dll" Component_="System.ComponentModel.Annotations.dll" FileName="SYSTEM~1.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2018\System.ComponentModel.Annotations.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll" Component_="EPPlus.dll" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2018\EPPlus.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll_1" Component_="EPPlus.dll_1" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2019\EPPlus.dll" SelfReg="false"/>
-    <ROW File="ExportSchedule.dll_1" Component_="ExportSchedule.dll_1" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2019\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_1" Component_="Microsoft.IO.RecyclableMemoryStream.dll_1" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2019\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="System.ComponentModel.Annotations.dll_1" Component_="System.ComponentModel.Annotations.dll_1" FileName="SYSTEM~1.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2019\System.ComponentModel.Annotations.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll_2" Component_="EPPlus.dll_2" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2020\EPPlus.dll" SelfReg="false"/>
-    <ROW File="ExportSchedule.dll_2" Component_="ExportSchedule.dll_2" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2020\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_2" Component_="Microsoft.IO.RecyclableMemoryStream.dll_2" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2020\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="System.ComponentModel.Annotations.dll_2" Component_="System.ComponentModel.Annotations.dll_2" FileName="SYSTEM~1.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2020\System.ComponentModel.Annotations.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll_3" Component_="EPPlus.dll_3" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2021\EPPlus.dll" SelfReg="false"/>
-    <ROW File="ExportSchedule.dll_3" Component_="ExportSchedule.dll_3" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2021\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_3" Component_="Microsoft.IO.RecyclableMemoryStream.dll_3" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2021\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="System.ComponentModel.Annotations.dll_3" Component_="System.ComponentModel.Annotations.dll_3" FileName="SYSTEM~1.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2021\System.ComponentModel.Annotations.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll_4" Component_="EPPlus.dll_4" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2022\EPPlus.dll" SelfReg="false"/>
-    <ROW File="ExportSchedule.dll_4" Component_="ExportSchedule.dll_4" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2022\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_4" Component_="Microsoft.IO.RecyclableMemoryStream.dll_4" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2022\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="System.ComponentModel.Annotations.dll_4" Component_="System.ComponentModel.Annotations.dll_4" FileName="SYSTEM~1.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2022\System.ComponentModel.Annotations.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll_5" Component_="EPPlus.dll_5" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2023\EPPlus.dll" SelfReg="false"/>
-    <ROW File="ExportSchedule.dll_5" Component_="ExportSchedule.dll_5" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2023\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_5" Component_="Microsoft.IO.RecyclableMemoryStream.dll_5" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2023\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="System.ComponentModel.Annotations.dll_5" Component_="System.ComponentModel.Annotations.dll_5" FileName="SYSTEM~1.DLL|System.ComponentModel.Annotations.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\2023\System.ComponentModel.Annotations.dll" SelfReg="false"/>
-    <ROW File="ExportSchedule.addin" Component_="ExportSchedule.addin" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\bin\2019\ExportSchedule.addin" SelfReg="false"/>
-    <ROW File="ExportSchedule.addin_1" Component_="ExportSchedule.addin_1" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\bin\2020\ExportSchedule.addin" SelfReg="false"/>
+    <ROW File="ExportSchedule.addin_3" Component_="ExportSchedule.addin_3" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\bin\2020\ExportSchedule.addin" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
-    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFileName="ExportSchedule.v[|ProductVersion]" Languages="en" InstallationType="4" UseLargeSchema="true" MsiPackageType="x64"/>
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFileName="ExportSchedule.v[|ProductVersion]" Languages="en_GB" InstallationType="4" UseLargeSchema="true" MsiPackageType="x64"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
-    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en_GB.ail"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
     <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
@@ -165,7 +143,6 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
     <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
-    <ROW Directory_="ApplicationPlugins_Dir" Component_="ApplicationPlugins" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
@@ -173,8 +150,10 @@
     <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
     <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
     <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
     <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
     <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[ProgramFiles64Folder][ProductName]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
@@ -183,37 +162,26 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
     <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="EPPlus.dll"/>
+    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Annotations.dll"/>
+    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Annotations.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="EPPlus.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Annotations.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="EPPlus.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Annotations.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="EPPlus.dll_3"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_1"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_2"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_3"/>
-    <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_4"/>
-    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll"/>
-    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Annotations.dll"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Annotations.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_2"/>
-    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_2"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_2"/>
-    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Annotations.dll_2"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_3"/>
-    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_3"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_3"/>
-    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Annotations.dll_3"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_4"/>
-    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_4"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_4"/>
-    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Annotations.dll_4"/>
-    <ROW Feature_="MainFeature" Component_="ApplicationPlugins"/>
-    <ROW Feature_="MainFeature" Component_="Warnings.addin"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_5"/>
-    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_5"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_5"/>
-    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Annotations.dll_5"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="ExportSchedule.exe" SourcePath="..\ExportSchedule\ExportSchedule.ico" Index="0"/>
@@ -227,6 +195,7 @@
     <ROW Action="AI_EnableDebugLog" Sequence="51"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
     <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
     <ROW Action="AI_DpiContentScale" Sequence="52"/>
@@ -234,12 +203,15 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
     <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
-    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
-    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
-    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] can not be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] can not be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] can not be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
     <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">

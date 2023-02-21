@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <Configurations>2018;2019;2020;2021;2022;2023</Configurations>
+    <Configurations>2020;2021;2022;2023</Configurations>
     <Description>Export Revit Schedule to Excel</Description>
     <Copyright>Copyright © Russell Green</Copyright>
     <Version>2.1</Version>
@@ -9,14 +9,6 @@
 	  <LangVersion>10</LangVersion>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)' == '2018'">
-    <TargetFramework>net461</TargetFramework>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == '2019'">
-    <TargetFramework>net47</TargetFramework>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == '2020'">
     <TargetFramework>net471</TargetFramework>
     <Optimize>false</Optimize>

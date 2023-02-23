@@ -40,37 +40,10 @@ class App : IExternalApplication
         }
         catch
         {
-            var archisoftPanel = false;
-            var pluginPath = @"C:\ProgramData\Autodesk\ApplicationPlugins";
-            if (System.IO.Directory.Exists(pluginPath) == true)
-            {
-                foreach (var folder in System.IO.Directory.GetDirectories(pluginPath))
-                {
-                    if (folder.ToLower().Contains("archisoft") == true & folder.ToLower().Contains("archisoft exportschedule") == false)
-                    {
-                        archisoftPanel = true;
-                        break;
-                    }
-                    
-                   if (folder.ToLower().Contains("rg") == true & folder.ToLower().Contains("rg exportschedule") == false)
-                    {
-                        archisoftPanel = true;
-                        break;
-                    }                   
-                }
-            }
-
-            if (archisoftPanel == true)
-            {
-                cachedUiCtrApp.CreateRibbonTab(_tabName);
-                panel = cachedUiCtrApp.CreateRibbonPanel(_tabName, Guid.NewGuid().ToString());
-                panel.Name = "ARBG_ExpSched_ExtApp";
-                panel.Title = "Export Schedule";
-            }
-            else
-            {
-                panel = cachedUiCtrApp.CreateRibbonPanel("Export Schedule");
-            }
+            cachedUiCtrApp.CreateRibbonTab(_tabName);
+            panel = cachedUiCtrApp.CreateRibbonPanel(_tabName, Guid.NewGuid().ToString());
+            panel.Name = "ARBG_ExpSched_ExtApp";
+            panel.Title = "Export Schedule";
         }
 
         PushButtonData pbDataExpSched = new PushButtonData("Export Schedule", "Export Schedule", Assembly.GetExecutingAssembly().Location, "ExportSchedule.cmdExportSchedule");

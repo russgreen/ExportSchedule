@@ -93,7 +93,7 @@
 
   <ItemGroup>
     <None Update="ExportSchedule.addin">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

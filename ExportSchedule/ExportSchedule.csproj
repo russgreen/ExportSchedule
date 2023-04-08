@@ -1,55 +1,62 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-    <Configurations>2020;2021;2022;2023</Configurations>
+	<Configurations>Debug R19;Debug R20;Debug R21;Debug R22;Debug R23;Debug R24</Configurations>
+	<Configurations>$(Configurations);Release R19;Release R20;Release R21;Release R22;Release R23;Release R24</Configurations>
+	  <Platforms>x64</Platforms>
     <Description>Export Revit Schedule to Excel</Description>
     <Copyright>Copyright © Russell Green</Copyright>
-    <Version>2.1</Version>
+    <Version>2.2</Version>
     <UseWindowsForms>true</UseWindowsForms>
-	  <LangVersion>10</LangVersion>
+	<LangVersion>Latest</LangVersion>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)' == '2020'">
-    <TargetFramework>net471</TargetFramework>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == '2021'">
-    <TargetFramework>net48</TargetFramework>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)' == '2022'">
-    <TargetFramework>net48</TargetFramework>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)' == '2023'">
-		<TargetFramework>net48</TargetFramework>
-		<Optimize>false</Optimize>
+	<PropertyGroup Condition="$(Configuration.Contains('Debug'))">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<DefineConstants>$(DefineConstants);DEBUG</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('Release'))">
+		<Optimize>true</Optimize>
+		<DebugType>none</DebugType>
 	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)' &lt;= '2021'">
-    <DefineConstants>DEBUG;REVIT$(Configuration);PREFORGETYPEID</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)' &gt;= '2022'">
-    <DefineConstants>DEBUG;REVIT$(Configuration)</DefineConstants>
-  </PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R19'))">
+		<TargetFramework>net47</TargetFramework>
+		<RevitVersion>2019</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2019;PREFORGETYPEID</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R20'))">
+		<TargetFramework>net471</TargetFramework>
+		<RevitVersion>2020</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2020;PREFORGETYPEID</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R21'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2021</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2021;PREFORGETYPEID</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R22'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2022</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2022</DefineConstants>
+		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R23'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2023</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2023</DefineConstants>
+		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER;REVIT2023_OR_GREATER</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration.Contains('R24'))">
+		<TargetFramework>net48</TargetFramework>
+		<RevitVersion>2024</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2024</DefineConstants>
+		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER;REVIT2023_OR_GREATER;REVIT2024_OR_GREATER</DefineConstants>
+	</PropertyGroup>
 
   <PropertyGroup>
-    <Path_DLL_API>..\..\RevitAPI\</Path_DLL_API>
-  </PropertyGroup>
-
-  <PropertyGroup>
-    <!-- Forcibly set platform to 'x64' and ignore architecture-related problems -->
-    <PlatformTarget>x64</PlatformTarget>
-    <Platforms>x64</Platforms>
-    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
-
-    <!-- Force the project to use the legacy debugger engine -->
-    <DebugEngines>{351668CC-8477-4fbf-BFE3-5F1006E4DB1F}</DebugEngines>
-
-    <!-- Define handy symbols to use in the code in order to accommodate different Revit versions,
-        e.g. by wrapping legacy / deprecated API calls with #if REVIT2014 | REVIT2015 
-    <DefineConstants>DEBUG;REVIT$(Configuration)</DefineConstants>-->
+    <!-- <DefineConstants>DEBUG;REVIT$(Configuration)</DefineConstants>-->
     <PreprocessorDefinitions>$(DefineConstants)</PreprocessorDefinitions>
 
     <!-- Multiple targets can cause obj folder locking by concurrent builds -->
@@ -69,33 +76,12 @@
     <EmbeddedResource Include="Images\ExpSched32.png" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="EPPlus" Version="5.8.7" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="AdWindows">
-      <HintPath>$(Path_DLL_API)\$(Configuration)\AdWindows.dll</HintPath>
-      <EmbedInteropTypes>false</EmbedInteropTypes>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="RevitAPI">
-      <HintPath>$(Path_DLL_API)\$(Configuration)\RevitAPI.dll</HintPath>
-      <EmbedInteropTypes>false</EmbedInteropTypes>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="RevitAPIUI">
-      <HintPath>$(Path_DLL_API)\$(Configuration)\RevitAPIUI.dll</HintPath>
-      <EmbedInteropTypes>false</EmbedInteropTypes>
-      <Private>false</Private>
-    </Reference>
-    <!-- 
-    <Reference Include="RevitAPIUI">
-      <HintPath>$(Path_DLL_API)\$(Configuration)\UIFramework.dll</HintPath>
-      <EmbedInteropTypes>false</EmbedInteropTypes>
-      <Private>false</Private>
-    </Reference>
-    -->
+	<ItemGroup>
+		<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*" />
+		<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*" />
+		<PackageReference Include="Nice3point.Revit.Api.AdWindows" Version="$(RevitVersion).*" />
+		<!--<PackageReference Include="Nice3point.Revit.Extensions" Version="$(RevitVersion).*"/>-->	  
+    <PackageReference Include="EPPlus" Version="6.2.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -110,9 +96,59 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy &quot;$(ProjectDir)ExportSchedule_2019.addin&quot; &quot;$(AppData)\Autodesk\REVIT\Addins\2019\ExportSchedule.addin&quot;&#xD;&#xA;copy &quot;$(ProjectDir)ExportSchedule_2020.addin&quot; &quot;$(AppData)\Autodesk\REVIT\Addins\2020\ExportSchedule.addin&quot;&#xD;&#xA;copy &quot;$(ProjectDir)ExportSchedule_2021.addin&quot; &quot;$(AppData)\Autodesk\REVIT\Addins\2021\ExportSchedule.addin&quot;&#xD;&#xA;copy &quot;$(ProjectDir)ExportSchedule_2022.addin&quot; &quot;$(AppData)\Autodesk\REVIT\Addins\2022\ExportSchedule.addin&quot;&#xD;&#xA;copy &quot;$(ProjectDir)ExportSchedule_2023.addin&quot; &quot;$(AppData)\Autodesk\REVIT\Addins\2023\ExportSchedule.addin&quot;" />
-  </Target>
+
+	<!-- Build debug manifest at build time -->
+	<Target Name="CreateAddinManifest" AfterTargets="AfterBuild">
+		<ItemGroup>
+			<AddinManifest Include="$(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\ExportSchedule.addin" />
+		</ItemGroup>
+		<ReplaceFileText InputFilename="ExportSchedule.addin" OutputFilename="@(AddinManifest)" MatchExpression="Assembly&gt;(.*?)&lt;" ReplacementText="Assembly&gt;$(TargetDir)$(AssemblyName).dll&lt;" />
+		<ReplaceFileText InputFilename="@(AddinManifest)" OutputFilename="@(AddinManifest)" MatchExpression="&lt;VendorId&gt;(.*?)&lt;" ReplacementText="&lt;VendorId&gt;$(PackageId)&lt;" />
+		<ReplaceFileText InputFilename="@(AddinManifest)" OutputFilename="@(AddinManifest)" MatchExpression="&lt;FullClassName&gt;(.*?)&lt;" ReplacementText="&lt;FullClassName&gt;$(RootNamespace).App&lt;" />
+	</Target>
+
+	<!-- Clean up debug manifest -->
+	<Target Name="CleanupAddinManifest" AfterTargets="AfterClean">
+		<Delete Files="$(AppData)\Autodesk\REVIT\Addins\$(RevitVersion)\ExportSchedule.addin" />
+	</Target>
+
+	<UsingTask Condition="'$(MSBuildRuntimeType)' == 'Full'" TaskName="ReplaceFileText" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v4.0.dll">
+		<ParameterGroup>
+			<InputFilename ParameterType="System.String" Required="true" />
+			<OutputFilename ParameterType="System.String" Required="true" />
+			<MatchExpression ParameterType="System.String" Required="true" />
+			<ReplacementText ParameterType="System.String" Required="true" />
+		</ParameterGroup>
+		<Task>
+			<Reference Include="System.Core" />
+			<Using Namespace="System" />
+			<Using Namespace="System.IO" />
+			<Using Namespace="System.Text.RegularExpressions" />
+			<Code Type="Fragment" Language="cs">
+				<![CDATA[
+              File.WriteAllText(OutputFilename,Regex.Replace(File.ReadAllText(InputFilename),MatchExpression,ReplacementText));
+        ]]>
+			</Code>
+		</Task>
+	</UsingTask>
+
+	<UsingTask Condition="'$(MSBuildRuntimeType)' == 'Core'" TaskName="ReplaceFileText" TaskFactory="RoslynCodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
+		<ParameterGroup>
+			<InputFilename ParameterType="System.String" Required="true" />
+			<OutputFilename ParameterType="System.String" Required="true" />
+			<MatchExpression ParameterType="System.String" Required="true" />
+			<ReplacementText ParameterType="System.String" Required="true" />
+		</ParameterGroup>
+		<Task>
+			<Using Namespace="System" />
+			<Using Namespace="System.IO" />
+			<Using Namespace="System.Text.RegularExpressions" />
+			<Code Type="Fragment" Language="cs">
+				<![CDATA[
+              File.WriteAllText(OutputFilename,Regex.Replace(File.ReadAllText(InputFilename),MatchExpression,ReplacementText));
+        ]]>
+			</Code>
+		</Task>
+	</UsingTask>
 
 </Project>

@@ -221,7 +221,18 @@ public class XLSXFileWriter
 
                 {
                     var range = worksheet.Cells[_currentRow, currentColumn + 1];
-                    range.Value = cellText;
+
+                    if (double.TryParse(cellText, out var numberValue))
+                    {
+                        // format for numeric values
+                        range.Value = numberValue;
+                    }
+                    else
+                    {
+                        // format for text values
+                        range.Value = cellText;
+                    }
+
                     range.Style.WrapText = true;
                     range.Style.Font.Size = (float)textSize;
                     range.Style.Font.Name = tableCellStyle.FontName;

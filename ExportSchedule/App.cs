@@ -12,7 +12,6 @@ namespace ExportSchedule;
 class App : IExternalApplication
 {
     public static UIControlledApplication cachedUiCtrApp;
-    private readonly string _tabName = "RG Tools";
     
     public Result OnShutdown(UIControlledApplication application)
     {
@@ -29,31 +28,23 @@ class App : IExternalApplication
 
     private RibbonPanel CreateRibbonPanel()
     {
-        RibbonPanel panel;
+        RibbonPanel panel = cachedUiCtrApp.CreateRibbonPanel(nameof(ExportSchedule));
+        panel.Title = "Export Schedule";
 
-        // Check if "RG Tools" already exists and use if its there
-        try
-        {
-            panel = cachedUiCtrApp.CreateRibbonPanel(_tabName, Guid.NewGuid().ToString());
-            panel.Name = "ARBG_ExpSched_ExtApp";
-            panel.Title = "Export Schedule";
-        }
-        catch
-        {
-            cachedUiCtrApp.CreateRibbonTab(_tabName);
-            panel = cachedUiCtrApp.CreateRibbonPanel(_tabName, Guid.NewGuid().ToString());
-            panel.Name = "ARBG_ExpSched_ExtApp";
-            panel.Title = "Export Schedule";
-        }
+        PushButtonData pushButtonData = new PushButtonData(nameof(ExportSchedule), 
+                       "Export Schedule", 
+                                  Assembly.GetExecutingAssembly().Location, 
+                                             $"{nameof(ExportSchedule)}.{nameof(ExportSchedule.CommandExportSchedule)}");
+        pushButtonData.AvailabilityClassName = $"{nameof(ExportSchedule)}.{nameof(ExportSchedule.CommandAvailabilityScheduleView)}";
 
-        PushButtonData pbDataExpSched = new PushButtonData("Export Schedule", "Export Schedule", Assembly.GetExecutingAssembly().Location, "ExportSchedule.cmdExportSchedule");
-        PushButton pbExpSched = (PushButton)panel.AddItem(pbDataExpSched);
-        pbExpSched.ToolTip = "Export schedule to Microsoft Excel format";
-        pbExpSched.LargeImage = PngImageSource("ExportSchedule.Images.ExpSched32.png");
+        PushButton pushButton = (PushButton)panel.AddItem(pushButtonData);
+        pushButton.ToolTip = "Export schedule to Microsoft Excel format";
+        pushButton.LargeImage = PngImageSource("ExportSchedule.Images.ExpSched32.png");
+
 
         ContextualHelp contextHelp = new ContextualHelp(ContextualHelpType.Url, @"https://github.com/russgreen/ExportSchedule/wiki");
 
-        pbExpSched.SetContextualHelp(contextHelp);
+        pushButton.SetContextualHelp(contextHelp);
 
         return panel;
     }

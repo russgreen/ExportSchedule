@@ -9,7 +9,7 @@ namespace ExportSchedule;
 
 [Transaction(TransactionMode.Manual)]
 [Regeneration(RegenerationOption.Manual)]
-public class cmdExportSchedule : IExternalCommand
+public class CommandExportSchedule : IExternalCommand
 {
     private UIApplication _uiapp;
     private UIDocument _uidoc;

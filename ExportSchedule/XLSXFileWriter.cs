@@ -45,7 +45,7 @@ public class XLSXFileWriter
             _worksheet = xlPackage.Workbook.Worksheets.Add(_filenameWithoutExtension);
 
             //write data to the worksheet
-            WriteSection(SectionType.Header, _worksheet);
+            //WriteSection(SectionType.Header, _worksheet);
             WriteSection(SectionType.Body, _worksheet);
 
             //set the file properties

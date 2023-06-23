@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="20.3.2" version="20.6" Modules="simple" RootPath="." Language="en_GB" Id="{EA0754B8-8E7B-45CE-A7E8-11C02D7FCD10}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="20.3.2" version="20.7.1" Modules="simple" RootPath="." Language="en_GB" Id="{EA0754B8-8E7B-45CE-A7E8-11C02D7FCD10}">
   <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
     <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
   </COMPONENT>
@@ -9,10 +9,10 @@
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPPRODUCTICON" Value="ExportSchedule.exe" Type="8"/>
     <ROW Property="Manufacturer" Value="Russell Green"/>
-    <ROW Property="ProductCode" Value="2057:{A67334AC-9F9B-4EC9-8288-52DC5AB9510A} " Type="16"/>
+    <ROW Property="ProductCode" Value="2057:{67882FF5-49B6-4F46-A1D2-A588A3522A68} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Export Schedule"/>
-    <ROW Property="ProductVersion" Value="2.3"/>
+    <ROW Property="ProductVersion" Value="2.4" Options="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{1F2B5E7D-7896-4D2D-86E6-8779EF3F7652}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>

@@ -238,6 +238,8 @@ public class XLSXFileWriter
                     range.Style.Font.Name = tableCellStyle.FontName;
                     range.Style.Font.Color.SetColor(System.Drawing.Color.FromArgb(tableCellStyle.TextColor.Red, tableCellStyle.TextColor.Green, tableCellStyle.TextColor.Blue));
                     range.Style.Font.Bold = tableCellStyle.IsFontBold;
+                    range.Style.Font.Italic = tableCellStyle.IsFontItalic;
+                    range.Style.Font.UnderLine = tableCellStyle.IsFontUnderline;
                     range.Style.HorizontalAlignment = horAlignment;
 
                     range.Style.VerticalAlignment = vertAlignment;

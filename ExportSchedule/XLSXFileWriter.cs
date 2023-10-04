@@ -222,7 +222,7 @@ public class XLSXFileWriter
                 {
                     var range = worksheet.Cells[_currentRow, currentColumn + 1];
 
-                    if (double.TryParse(cellText, out var numberValue))
+                    if (!cellText.StartsWith("0") && double.TryParse(cellText, out var numberValue))
                     {
                         // format for numeric values
                         range.Value = numberValue;

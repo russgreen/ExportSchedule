@@ -19,8 +19,8 @@ public class XLSXFileWriter
 
     private List<Tuple<int, int>> _writtenCells = new List<Tuple<int, int>>();
 
-    private Color black => new Color(0, 0, 0);
-    private Color white => new Color(255, 255, 255);
+    private Color _black => new Color(0, 0, 0);
+    private Color _white => new Color(255, 255, 255);
 
     public XLSXFileWriter(string fileName, string filenameWithoutExtension, ViewSchedule viewSchedule)
     {
@@ -243,7 +243,7 @@ public class XLSXFileWriter
                     range.Style.HorizontalAlignment = horAlignment;
 
                     range.Style.VerticalAlignment = vertAlignment;
-                    if (!ColorsEqual(tableCellStyle.BackgroundColor, white))
+                    if (!ColorsEqual(tableCellStyle.BackgroundColor, _white))
                     {
                         range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
                         range.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.FromArgb(tableCellStyle.BackgroundColor.Red, tableCellStyle.BackgroundColor.Green, tableCellStyle.BackgroundColor.Blue));

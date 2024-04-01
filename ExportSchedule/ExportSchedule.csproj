@@ -1,14 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
-	<Configurations>Debug R19;Debug R20;Debug R21;Debug R22;Debug R23;Debug R24</Configurations>
-	<Configurations>$(Configurations);Release R19;Release R20;Release R21;Release R22;Release R23;Release R24</Configurations>
-	  <Platforms>x64</Platforms>
+	<Configurations>Debug R19;Debug R20;Debug R21;Debug R22;Debug R23;Debug R24;Debug R25</Configurations>
+	<Configurations>$(Configurations);Release R19;Release R20;Release R21;Release R22;Release R23;Release R24;Release R25</Configurations>
     <Description>Export Revit Schedule to Excel</Description>
     <Copyright>Copyright © Russell Green</Copyright>
-    <Version>2.4</Version>
-    <UseWindowsForms>true</UseWindowsForms>
-	<LangVersion>Latest</LangVersion>
+    <Version>2.5</Version>
+	  <PlatformTarget>x64</PlatformTarget>
+	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	  <LangVersion>latest</LangVersion>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <NeutralLanguage>en</NeutralLanguage>
+	  <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+	  <!--<UseWindowsForms>true</UseWindowsForms>-->
+	  <UseWPF>true</UseWPF>
+	  <!--<ImplicitUsings>true</ImplicitUsings>-->
+	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+	  <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+	  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
 	<PropertyGroup Condition="$(Configuration.Contains('Debug'))">
@@ -54,20 +64,13 @@
 		<DefineConstants>$(DefineConstants);REVIT2024</DefineConstants>
 		<DefineConstants>$(DefineConstants);REVIT2022_OR_GREATER;REVIT2023_OR_GREATER;REVIT2024_OR_GREATER</DefineConstants>
 	</PropertyGroup>
-
-  <PropertyGroup>
-    <!-- <DefineConstants>DEBUG;REVIT$(Configuration)</DefineConstants>-->
-    <PreprocessorDefinitions>$(DefineConstants)</PreprocessorDefinitions>
-
-    <!-- Multiple targets can cause obj folder locking by concurrent builds -->
-    <BuildInParallel>false</BuildInParallel>
-
-    <!-- Override 'OutputPath'  -->
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>bin\$(Configuration)</OutputPath>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-  </PropertyGroup>
-
+	<PropertyGroup Condition="$(Configuration.Contains('R25'))">
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<RevitVersion>2025</RevitVersion>
+		<DefineConstants>$(DefineConstants);REVIT2025</DefineConstants>
+		<DefineConstants>$(DefineConstants);REVIT2019_OR_GREATER;REVIT2020_OR_GREATER;REVIT2021_OR_GREATER;REVIT2022_OR_GREATER;REVIT2023_OR_GREATER;REVIT2024_OR_GREATER;REVIT2025_OR_GREATER</DefineConstants>
+	</PropertyGroup>
+	
   <ItemGroup>
     <None Remove="Images\ExpSched32.png" />
   </ItemGroup>
@@ -77,19 +80,36 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*" />
+		<!--<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*" />
 		<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*" />
-		<PackageReference Include="Nice3point.Revit.Api.AdWindows" Version="$(RevitVersion).*" />
+		<PackageReference Include="Nice3point.Revit.Api.AdWindows" Version="$(RevitVersion).*" />-->
 		<!--<PackageReference Include="Nice3point.Revit.Extensions" Version="$(RevitVersion).*"/>-->	  
     <PackageReference Include="EPPlus" Version="6.2.1" />
   </ItemGroup>
 
-  <ItemGroup>
+	<Choose>
+		<When Condition="$(Configuration.Contains('R25'))">
+			<ItemGroup>
+				<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*-preview.*" />
+				<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*-preview.*" />
+				<PackageReference Include="Nice3point.Revit.Api.AdWindows" Version="$(RevitVersion).*-preview.*" />
+			</ItemGroup>
+		</When>
+		<Otherwise>
+			<ItemGroup>
+				<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*-*" />
+				<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*-*" />
+				<PackageReference Include="Nice3point.Revit.Api.AdWindows" Version="$(RevitVersion).*-*" />
+			</ItemGroup>
+		</Otherwise>
+	</Choose>
+
+  <!--<ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System.Printing" />
     <Reference Include="WindowsBase" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <ItemGroup>
     <None Update="ExportSchedule.addin">

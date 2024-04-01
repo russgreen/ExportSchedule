@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Autodesk.Revit.DB;
+using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using Autodesk.Revit.DB;
-using OfficeOpenXml;
 
 namespace ExportSchedule;
 
@@ -248,6 +248,11 @@ public class XLSXFileWriter
                         range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
                         range.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.FromArgb(tableCellStyle.BackgroundColor.Red, tableCellStyle.BackgroundColor.Green, tableCellStyle.BackgroundColor.Blue));
                     }
+
+                    range.Style.Border.Top.Style = GetLineStyle(tableCellStyle.BorderTopLineStyle);
+                    range.Style.Border.Bottom.Style = GetLineStyle(tableCellStyle.BorderBottomLineStyle);
+                    range.Style.Border.Left.Style = GetLineStyle(tableCellStyle.BorderLeftLineStyle);
+                    range.Style.Border.Right.Style = GetLineStyle(tableCellStyle.BorderRightLineStyle);
                 }
 
                 worksheet.Column(currentColumn + 1).Width = sectionData.GetColumnWidth(currentColumn) * 1150 / 7.5d;
@@ -268,5 +273,21 @@ public class XLSXFileWriter
     private bool ColorsEqual(Color color1, Color color2)
     {
         return color1.Red == color2.Red && color1.Green == color2.Green && color1.Blue == color2.Blue;
+    }
+
+    private static OfficeOpenXml.Style.ExcelBorderStyle GetLineStyle(ElementId border)
+    {
+        //TODO get the line weight and line pattern from the border 
+        //Autodesk:Revit:DB:GraphicsStyle
+
+        //OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+        //OfficeOpenXml.Style.ExcelBorderStyle.Medium;
+        //OfficeOpenXml.Style.ExcelBorderStyle.Thick;
+        //OfficeOpenXml.Style.ExcelBorderStyle.Dotted;
+        //OfficeOpenXml.Style.ExcelBorderStyle.Dashed;
+        //OfficeOpenXml.Style.ExcelBorderStyle.DashDotDot;
+        //OfficeOpenXml.Style.ExcelBorderStyle.Double;
+
+        return OfficeOpenXml.Style.ExcelBorderStyle.None;
     }
 }

@@ -3,7 +3,6 @@ using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using System.Diagnostics;
 using System.IO;
-using System.Windows.Forms;
 
 namespace ExportSchedule;
 
@@ -34,14 +33,14 @@ public class CommandExportSchedule : IExternalCommand
             return Autodesk.Revit.UI.Result.Failed;
         }
 
-        var saveFileDialog = new SaveFileDialog()
+        var saveFileDialog = new Microsoft.Win32.SaveFileDialog()
         {
             Filter = "Microsoft Excel|*.xlsx",
             Title = "Export schedule to file",
             FileName = activeView.Name,
             InitialDirectory = Path.GetDirectoryName(_doc.PathName)
         };
-        if (saveFileDialog.ShowDialog() == DialogResult.Cancel || string.IsNullOrEmpty(saveFileDialog.FileName))
+        if (saveFileDialog.ShowDialog() == false || string.IsNullOrEmpty(saveFileDialog.FileName))
         {
             return Autodesk.Revit.UI.Result.Cancelled;
         }

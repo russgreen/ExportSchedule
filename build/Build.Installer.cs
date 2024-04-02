@@ -10,7 +10,7 @@ using Nuke.Common.Git;
 partial class Build
 {
     Target Installer => _ => _
-    .DependsOn(Sign)
+    .TriggeredBy(Sign)
     .OnlyWhenStatic(() => GitRepository.IsOnMainOrMasterBranch())
     .Executes(() =>
     {

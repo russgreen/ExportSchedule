@@ -80,29 +80,12 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<!--<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*" />
-		<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*" />
-		<PackageReference Include="Nice3point.Revit.Api.AdWindows" Version="$(RevitVersion).*" />-->
+		<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*-*" />
+		<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*-*" />
+		<PackageReference Include="Nice3point.Revit.Api.AdWindows" Version="$(RevitVersion).*-*" />
 		<!--<PackageReference Include="Nice3point.Revit.Extensions" Version="$(RevitVersion).*"/>-->	  
     <PackageReference Include="EPPlus" Version="6.2.1" />
   </ItemGroup>
-
-	<Choose>
-		<When Condition="$(Configuration.Contains('R25'))">
-			<ItemGroup>
-				<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*-preview.*" />
-				<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*-preview.*" />
-				<PackageReference Include="Nice3point.Revit.Api.AdWindows" Version="$(RevitVersion).*-preview.*" />
-			</ItemGroup>
-		</When>
-		<Otherwise>
-			<ItemGroup>
-				<PackageReference Include="Nice3point.Revit.Api.RevitAPI" Version="$(RevitVersion).*-*" />
-				<PackageReference Include="Nice3point.Revit.Api.RevitAPIUI" Version="$(RevitVersion).*-*" />
-				<PackageReference Include="Nice3point.Revit.Api.AdWindows" Version="$(RevitVersion).*-*" />
-			</ItemGroup>
-		</Otherwise>
-	</Choose>
 
   <!--<ItemGroup>
     <Reference Include="PresentationCore" />

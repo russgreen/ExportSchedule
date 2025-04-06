@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="20.3.2" version="21.4" Modules="simple" RootPath="." Language="en_GB" Id="{EA0754B8-8E7B-45CE-A7E8-11C02D7FCD10}">
-  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
-    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
-  </COMPONENT>
+<DOCUMENT Type="Advanced Installer" CreateVersion="20.3.2" version="22.2" Modules="simple" RootPath="." Language="en_GB" Id="{EA0754B8-8E7B-45CE-A7E8-11C02D7FCD10}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPPRODUCTICON" Value="ExportSchedule.exe" Type="8"/>
     <ROW Property="Manufacturer" Value="Russell Green"/>
-    <ROW Property="ProductCode" Value="2057:{9B5EAFA6-C4B6-46C3-9FBD-1F8AA58F5756} " Type="16"/>
+    <ROW Property="ProductCode" Value="2057:{D5BCCE26-862D-40DE-AC46-C6AD4C41F78A} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Export Schedule"/>
-    <ROW Property="ProductVersion" Value="2.5" Options="32"/>
+    <ROW Property="ProductVersion" Value="3.0" Options="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{1F2B5E7D-7896-4D2D-86E6-8779EF3F7652}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -37,6 +34,7 @@
     <ROW Directory="ExportSchedule_4_Dir" Directory_Parent="__4_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
     <ROW Directory="ExportSchedule_5_Dir" Directory_Parent="__5_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
     <ROW Directory="ExportSchedule_6_Dir" Directory_Parent="__6_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
+    <ROW Directory="ExportSchedule_7_Dir" Directory_Parent="__7_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
     <ROW Directory="ExportSchedule_Dir" Directory_Parent="__Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
     <ROW Directory="Revit_Dir" Directory_Parent="Autodesk_Dir" DefaultDir="Revit"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
@@ -46,31 +44,51 @@
     <ROW Directory="__4_Dir" Directory_Parent="Addins_Dir" DefaultDir="2024"/>
     <ROW Directory="__5_Dir" Directory_Parent="Addins_Dir" DefaultDir="2025"/>
     <ROW Directory="__6_Dir" Directory_Parent="Addins_Dir" DefaultDir="2019"/>
+    <ROW Directory="__7_Dir" Directory_Parent="Addins_Dir" DefaultDir="2026"/>
     <ROW Directory="__Dir" Directory_Parent="Addins_Dir" DefaultDir="2020"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{DEAD45F4-5991-49CA-ADDF-ACE6CE6A3433}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="EPPlus.Interfaces.dll" ComponentId="{677031EF-C306-455E-A139-95D67E9E7A43}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="EPPlus.Interfaces.dll"/>
-    <ROW Component="EPPlus.Interfaces.dll_1" ComponentId="{9D8B5E00-744D-4C1C-BD13-310374DAB613}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="EPPlus.Interfaces.dll_1"/>
-    <ROW Component="EPPlus.Interfaces.dll_2" ComponentId="{6D09FCAE-69EC-4FE4-BAB3-563E0B9A996F}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="EPPlus.Interfaces.dll_2"/>
-    <ROW Component="EPPlus.Interfaces.dll_3" ComponentId="{F46FAEC3-3273-4B64-9113-9EE28F5F7636}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="EPPlus.Interfaces.dll_3"/>
-    <ROW Component="EPPlus.Interfaces.dll_4" ComponentId="{7205DCEA-423C-4BCD-B701-A693A982AEC4}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="EPPlus.Interfaces.dll_4"/>
-    <ROW Component="EPPlus.Interfaces.dll_5" ComponentId="{1BF99CDA-E94E-43D4-AF04-36BD8622332F}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="EPPlus.Interfaces.dll_5"/>
-    <ROW Component="EPPlus.Interfaces.dll_6" ComponentId="{7001B797-F316-4675-B38F-92D146577A2D}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="EPPlus.Interfaces.dll_6"/>
-    <ROW Component="EPPlus.System.Drawing.dll" ComponentId="{89F1DE48-9119-49ED-BF3F-8462E7D80549}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="EPPlus.System.Drawing.dll"/>
-    <ROW Component="EPPlus.System.Drawing.dll_1" ComponentId="{FE28940D-DCD7-4A28-A3EC-8CAD7B0644ED}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="EPPlus.System.Drawing.dll_1"/>
-    <ROW Component="EPPlus.System.Drawing.dll_2" ComponentId="{FDAD30D3-630F-4E35-8675-C279CC2E10FE}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="EPPlus.System.Drawing.dll_2"/>
-    <ROW Component="EPPlus.System.Drawing.dll_3" ComponentId="{6DF70FE1-744C-4C39-B422-493A7D45A577}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="EPPlus.System.Drawing.dll_3"/>
-    <ROW Component="EPPlus.System.Drawing.dll_4" ComponentId="{8257F961-5A27-4676-9C28-9DF73B18447C}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="EPPlus.System.Drawing.dll_4"/>
-    <ROW Component="EPPlus.System.Drawing.dll_5" ComponentId="{FC025764-F61D-462D-9928-68A566D367A8}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="EPPlus.System.Drawing.dll_5"/>
-    <ROW Component="EPPlus.System.Drawing.dll_6" ComponentId="{A14FCC94-8AD2-45C9-8715-CAF8027DB038}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="EPPlus.System.Drawing.dll_6"/>
-    <ROW Component="EPPlus.dll" ComponentId="{B0EE2DF8-02F1-4348-8C9B-BF9F0EF2EBA6}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="EPPlus.dll"/>
-    <ROW Component="EPPlus.dll_1" ComponentId="{C0C8EC43-CC62-40AE-ACEC-F48102B4B39F}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="EPPlus.dll_1"/>
-    <ROW Component="EPPlus.dll_2" ComponentId="{39668A97-1BFD-4846-B28A-F8E6531826C6}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="EPPlus.dll_2"/>
-    <ROW Component="EPPlus.dll_3" ComponentId="{760BD588-030C-4C70-A6F0-23C8640CAB86}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="EPPlus.dll_3"/>
-    <ROW Component="EPPlus.dll_4" ComponentId="{8B064E2D-55E2-4EAB-9E41-7A3C88806E27}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="EPPlus.dll_4"/>
-    <ROW Component="EPPlus.dll_5" ComponentId="{F48320A4-1700-47FC-ADA5-EE7900838532}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="EPPlus.dll_5"/>
-    <ROW Component="EPPlus.dll_6" ComponentId="{C6DD1346-A87D-43DD-9759-861253AFA1AD}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="EPPlus.dll_6"/>
+    <ROW Component="ClosedXML.Parser.dll" ComponentId="{59277200-AA16-429A-90E9-652B02027F02}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll"/>
+    <ROW Component="ClosedXML.Parser.dll_1" ComponentId="{EF97101C-A17C-4C91-8753-8A59261A124B}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_1"/>
+    <ROW Component="ClosedXML.Parser.dll_2" ComponentId="{EA107A8B-42BF-40CF-A1BB-36F80094855E}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_2"/>
+    <ROW Component="ClosedXML.Parser.dll_3" ComponentId="{E8471B4E-8643-406F-AB33-720343522DA9}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_3"/>
+    <ROW Component="ClosedXML.Parser.dll_4" ComponentId="{0BD23BD6-7DCB-4288-9209-DD0A42819193}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_4"/>
+    <ROW Component="ClosedXML.Parser.dll_5" ComponentId="{94F45995-2E85-4D04-8C3C-8EF0FF5C39F1}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_5"/>
+    <ROW Component="ClosedXML.Parser.dll_6" ComponentId="{C7B43436-A500-4834-82DD-8538E9E6B082}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_6"/>
+    <ROW Component="ClosedXML.Parser.dll_7" ComponentId="{2F6D8CB8-1CA0-423D-9F1E-BBFD0E30DE96}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_7"/>
+    <ROW Component="ClosedXML.dll" ComponentId="{1A08E974-14FB-478C-A7BC-83D3C6650D01}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="ClosedXML.dll"/>
+    <ROW Component="ClosedXML.dll_1" ComponentId="{7E61566A-5F9A-4688-8E1F-F6A4A0F10F5F}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="ClosedXML.dll_1"/>
+    <ROW Component="ClosedXML.dll_2" ComponentId="{ED2E4BCC-D5E4-4371-8DE7-BF5D2EDABC55}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="ClosedXML.dll_2"/>
+    <ROW Component="ClosedXML.dll_3" ComponentId="{33A8D7E1-AC51-4459-9118-07A72343B286}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="ClosedXML.dll_3"/>
+    <ROW Component="ClosedXML.dll_4" ComponentId="{F1F9DCFB-7DEE-4E4E-8A46-0E8DF893E05F}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="ClosedXML.dll_4"/>
+    <ROW Component="ClosedXML.dll_5" ComponentId="{C3D6845F-3CB0-4F0B-B781-52CFBC8A0FAD}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="ClosedXML.dll_5"/>
+    <ROW Component="ClosedXML.dll_6" ComponentId="{2C187E55-FA6F-497F-A9D9-EAFAEE136AFF}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="ClosedXML.dll_6"/>
+    <ROW Component="ClosedXML.dll_7" ComponentId="{1032F108-0FD0-4126-9462-FACD0CEA6327}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="ClosedXML.dll_7"/>
+    <ROW Component="DocumentFormat.OpenXml.Framework.dll" ComponentId="{FC8A8B0A-6F12-4D5E-9396-349EBE8AC1BC}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll"/>
+    <ROW Component="DocumentFormat.OpenXml.Framework.dll_1" ComponentId="{3AA2D21E-9B31-4502-943F-17169F57254B}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_1"/>
+    <ROW Component="DocumentFormat.OpenXml.Framework.dll_2" ComponentId="{42894954-96BA-4341-8342-61015B379684}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_2"/>
+    <ROW Component="DocumentFormat.OpenXml.Framework.dll_3" ComponentId="{01025CDC-1363-4D33-A196-36A408C81429}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_3"/>
+    <ROW Component="DocumentFormat.OpenXml.Framework.dll_4" ComponentId="{63D462E1-2011-4A43-9987-FBA43C912388}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_4"/>
+    <ROW Component="DocumentFormat.OpenXml.Framework.dll_5" ComponentId="{CDB47DCC-8758-40B6-9DBF-DCD66AA9D94B}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_5"/>
+    <ROW Component="DocumentFormat.OpenXml.Framework.dll_6" ComponentId="{DFFDE743-A4BD-4369-8559-8D84CC360FE6}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_6"/>
+    <ROW Component="DocumentFormat.OpenXml.Framework.dll_7" ComponentId="{34C1E4D7-9F58-4418-A582-FD05D8C9E049}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_7"/>
+    <ROW Component="DocumentFormat.OpenXml.dll" ComponentId="{A8A2E856-5852-4E8A-A435-DFD390774FBE}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll"/>
+    <ROW Component="DocumentFormat.OpenXml.dll_1" ComponentId="{18A5815E-9555-4D26-8AF6-4478E774C0B7}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_1"/>
+    <ROW Component="DocumentFormat.OpenXml.dll_2" ComponentId="{7D66C822-717F-4F08-8952-6EB520A1F083}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_2"/>
+    <ROW Component="DocumentFormat.OpenXml.dll_3" ComponentId="{9D614874-FF65-44F5-9662-C8DF375452D8}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_3"/>
+    <ROW Component="DocumentFormat.OpenXml.dll_4" ComponentId="{8430333F-22C9-4ABE-8AE5-C9C01F26B5A5}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_4"/>
+    <ROW Component="DocumentFormat.OpenXml.dll_5" ComponentId="{FF204043-7A80-40C6-B077-63D08DA0B037}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_5"/>
+    <ROW Component="DocumentFormat.OpenXml.dll_6" ComponentId="{FF59E818-6F3C-455E-8E5D-7707067CF9C7}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_6"/>
+    <ROW Component="DocumentFormat.OpenXml.dll_7" ComponentId="{8D23AAEF-CCE8-4787-8E50-F2E62E9E7AE3}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_7"/>
+    <ROW Component="ExcelNumberFormat.dll" ComponentId="{AA253FB0-CFC1-4251-8AFC-596BE82CCC15}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll"/>
+    <ROW Component="ExcelNumberFormat.dll_1" ComponentId="{E7B0172C-AA66-4F99-AD01-54EFC7A16048}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_1"/>
+    <ROW Component="ExcelNumberFormat.dll_2" ComponentId="{5FDF603A-47CB-42DC-A85A-FC560CFE08A1}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_2"/>
+    <ROW Component="ExcelNumberFormat.dll_3" ComponentId="{57B003FB-44F7-4CD3-B34E-54940CF89373}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_3"/>
+    <ROW Component="ExcelNumberFormat.dll_4" ComponentId="{D33AB59C-81B5-4CC2-836A-1AE5C2E89D6B}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_4"/>
+    <ROW Component="ExcelNumberFormat.dll_5" ComponentId="{E1D5D295-15F8-4869-B43C-321D676036FE}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_5"/>
+    <ROW Component="ExcelNumberFormat.dll_6" ComponentId="{383D9F92-D4E4-4A56-B041-7A0D46E2F1B8}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_6"/>
+    <ROW Component="ExcelNumberFormat.dll_7" ComponentId="{0492CD29-6746-45DF-9EE4-359DEDC8AB07}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_7"/>
     <ROW Component="ExportSchedule.addin" ComponentId="{E35D2D66-3DAF-4E4C-A7DF-FD66BDE333A9}" Directory_="__3_Dir" Attributes="0" KeyPath="ExportSchedule.addin" Type="0"/>
     <ROW Component="ExportSchedule.addin_1" ComponentId="{D40CF210-807A-4224-B15F-2FBF8FDD09D0}" Directory_="__2_Dir" Attributes="0" KeyPath="ExportSchedule.addin_1" Type="0"/>
     <ROW Component="ExportSchedule.addin_2" ComponentId="{8DAB7B29-9131-4C67-B550-E585A17B4B76}" Directory_="__1_Dir" Attributes="0" KeyPath="ExportSchedule.addin_2" Type="0"/>
@@ -78,7 +96,9 @@
     <ROW Component="ExportSchedule.addin_4" ComponentId="{94760C95-26FA-4236-A153-D495E225224E}" Directory_="__4_Dir" Attributes="0" KeyPath="ExportSchedule.addin_4" Type="0"/>
     <ROW Component="ExportSchedule.addin_5" ComponentId="{1FBAFC2E-E18C-43DF-A0F5-40A19ABE03E1}" Directory_="__5_Dir" Attributes="0" KeyPath="ExportSchedule.addin_5" Type="0"/>
     <ROW Component="ExportSchedule.addin_6" ComponentId="{DDB9D2FF-0A51-4325-B8DD-C24B60FA937E}" Directory_="__6_Dir" Attributes="0" KeyPath="ExportSchedule.addin_6" Type="0"/>
+    <ROW Component="ExportSchedule.addin_7" ComponentId="{6F27D44C-F015-49B4-9F5D-4DE9EC9B2E67}" Directory_="__7_Dir" Attributes="0" KeyPath="ExportSchedule.addin_7" Type="0"/>
     <ROW Component="ExportSchedule.deps.json" ComponentId="{30DBBF9A-F518-4222-8EA2-23C84D1FEE0F}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="ExportSchedule.deps.json" Type="0"/>
+    <ROW Component="ExportSchedule.deps.json_1" ComponentId="{77CBACC4-AD6F-429E-A375-6CE68929AAEB}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="ExportSchedule.deps.json_1" Type="0"/>
     <ROW Component="ExportSchedule.dll" ComponentId="{3B53249F-0030-4724-8509-64E23E3A818E}" Directory_="ExportSchedule_Dir" Attributes="256" KeyPath="ExportSchedule.dll"/>
     <ROW Component="ExportSchedule.dll_1" ComponentId="{EF5ED985-2D52-441D-A972-31259C5D3630}" Directory_="ExportSchedule_1_Dir" Attributes="256" KeyPath="ExportSchedule.dll_1"/>
     <ROW Component="ExportSchedule.dll_2" ComponentId="{E0E57481-1A20-4EA3-BAFE-3DC9B38CCF71}" Directory_="ExportSchedule_2_Dir" Attributes="256" KeyPath="ExportSchedule.dll_2"/>
@@ -86,22 +106,164 @@
     <ROW Component="ExportSchedule.dll_4" ComponentId="{2659C7BE-FABC-429E-B7C3-90234B881531}" Directory_="ExportSchedule_4_Dir" Attributes="256" KeyPath="ExportSchedule.dll_4"/>
     <ROW Component="ExportSchedule.dll_5" ComponentId="{F36D4C02-445E-4F44-AA0F-A7F0CCCE8975}" Directory_="ExportSchedule_5_Dir" Attributes="256" KeyPath="ExportSchedule.dll_5"/>
     <ROW Component="ExportSchedule.dll_6" ComponentId="{AE06EF58-3509-4D5B-BA8F-04E0FAD6E3C8}" Directory_="ExportSchedule_6_Dir" Attributes="256" KeyPath="ExportSchedule.dll_6"/>
-    <ROW Component="Microsoft.Extensions.Configuration.Abstractions.dll" ComponentId="{D0CFAF42-E674-4EA2-9161-59677DEBBEF1}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.Abstractions.dll"/>
-    <ROW Component="Microsoft.Extensions.Configuration.FileExtensions.dll" ComponentId="{8C7B0296-ECC7-4AC0-AA8E-BB674B5A8316}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.FileExtensions.dll"/>
-    <ROW Component="Microsoft.Extensions.Configuration.Json.dll" ComponentId="{9D851139-7BE6-413C-B2B6-D7511BFD7D01}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.Json.dll"/>
-    <ROW Component="Microsoft.Extensions.Configuration.dll" ComponentId="{234C6DCC-14F3-4D3D-B41C-31FD14074DA1}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Configuration.dll"/>
-    <ROW Component="Microsoft.Extensions.FileProviders.Abstractions.dll" ComponentId="{382CF127-1FC8-404C-976F-86C2342B6F75}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.FileProviders.Abstractions.dll"/>
-    <ROW Component="Microsoft.Extensions.FileProviders.Physical.dll" ComponentId="{E959C5CC-1A53-4F57-A603-7B117B54ED00}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.FileProviders.Physical.dll"/>
-    <ROW Component="Microsoft.Extensions.FileSystemGlobbing.dll" ComponentId="{F16B2EB6-8913-4356-9654-A808CBF9EE4D}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.FileSystemGlobbing.dll"/>
-    <ROW Component="Microsoft.Extensions.Primitives.dll" ComponentId="{802EB1BA-CD35-4A05-8AEB-F3433AF7C210}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="Microsoft.Extensions.Primitives.dll"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream._1_dll" ComponentId="{49D1F839-5DE2-4AA4-B331-2E7AE9314EA8}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream._1_dll"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream._2_dll" ComponentId="{003DD53B-1BB6-404F-AC82-DE551E69E3DA}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream._2_dll"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll" ComponentId="{243D9AC0-21D1-44D9-83C2-D6816533CE5A}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_1" ComponentId="{38FB291D-B2F9-4135-8E5D-6D0FB85E126B}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_1"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_2" ComponentId="{E030F6C2-9D75-4D5F-84C6-70798DDB6C32}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_2"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_3" ComponentId="{69E744ED-CA75-4E87-9FAC-4B1C07373449}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_3"/>
-    <ROW Component="Microsoft.IO.RecyclableMemoryStream.dll_4" ComponentId="{6D5DA180-E745-46D4-899D-727476B39A6F}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="Microsoft.IO.RecyclableMemoryStream.dll_4"/>
+    <ROW Component="ExportSchedule.dll_7" ComponentId="{702FA10B-346F-40DC-A679-CA9E284D10BD}" Directory_="ExportSchedule_7_Dir" Attributes="256" KeyPath="ExportSchedule.dll_7"/>
+    <ROW Component="Microsoft.Bcl.HashCode.dll" ComponentId="{C464FFA2-6FB1-4B68-9DD5-1B5C79D8150C}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="Microsoft.Bcl.HashCode.dll"/>
+    <ROW Component="Microsoft.Bcl.HashCode.dll_1" ComponentId="{90DA13BF-7273-4D06-AA7E-1EED00F7B62C}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="Microsoft.Bcl.HashCode.dll_1"/>
+    <ROW Component="Microsoft.Bcl.HashCode.dll_2" ComponentId="{C031B104-7831-4C18-97BB-97B0AEB174B8}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="Microsoft.Bcl.HashCode.dll_2"/>
+    <ROW Component="Microsoft.Bcl.HashCode.dll_3" ComponentId="{90C41D22-8301-4932-988B-BDC61EEAAA29}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="Microsoft.Bcl.HashCode.dll_3"/>
+    <ROW Component="Microsoft.Bcl.HashCode.dll_4" ComponentId="{E8B7FA59-2432-4FDA-87B9-4F888E56B2EF}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="Microsoft.Bcl.HashCode.dll_4"/>
+    <ROW Component="Microsoft.Bcl.HashCode.dll_5" ComponentId="{1A5D399B-F5E5-46EC-865E-B03FCB94F15A}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="Microsoft.Bcl.HashCode.dll_5"/>
+    <ROW Component="Microsoft.Win32.Primitives.dll" ComponentId="{08EC3A0E-B24F-4E73-9E4B-F539486E8D24}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="Microsoft.Win32.Primitives.dll"/>
     <ROW Component="ProductInformation" ComponentId="{730984FF-300C-4695-B2D7-8DCC14B8B77F}" Directory_="APPDIR" Attributes="260" KeyPath="Version"/>
+    <ROW Component="RBush.dll" ComponentId="{CE9B08F1-B5F2-4F1F-9551-81506B8CB597}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="RBush.dll"/>
+    <ROW Component="RBush.dll_1" ComponentId="{A7753EEE-CA9F-48FC-9721-B7C236F5D37B}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="RBush.dll_1"/>
+    <ROW Component="RBush.dll_2" ComponentId="{52653AB0-25E1-4478-B402-E1AE96CCD084}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="RBush.dll_2"/>
+    <ROW Component="RBush.dll_3" ComponentId="{106F6679-E88C-4FC9-A433-A9ECD3194413}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="RBush.dll_3"/>
+    <ROW Component="RBush.dll_4" ComponentId="{A99BB774-8BC1-43C2-AF02-7074964E074F}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="RBush.dll_4"/>
+    <ROW Component="RBush.dll_5" ComponentId="{78D98ECE-F7B7-4B18-BD4D-65655D8EF600}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="RBush.dll_5"/>
+    <ROW Component="RBush.dll_6" ComponentId="{B4C9012F-518B-4A74-9C77-49CC14035631}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="RBush.dll_6"/>
+    <ROW Component="RBush.dll_7" ComponentId="{A36498A8-9F4B-4B4F-AC8D-235CA76EAC55}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="RBush.dll_7"/>
+    <ROW Component="SixLabors.Fonts.dll" ComponentId="{60E04771-C3E7-42E7-8881-0DACBEA0470F}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll"/>
+    <ROW Component="SixLabors.Fonts.dll_1" ComponentId="{9DC28020-6513-420C-AF35-C070E7BDB423}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_1"/>
+    <ROW Component="SixLabors.Fonts.dll_2" ComponentId="{494DA287-761C-4F28-BD40-D5E3BE6E178C}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_2"/>
+    <ROW Component="SixLabors.Fonts.dll_3" ComponentId="{FF2B77D7-98DE-434B-8064-E7EAEC676AE7}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_3"/>
+    <ROW Component="SixLabors.Fonts.dll_4" ComponentId="{B514D04D-3672-4434-AC86-2E375D96BE1B}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_4"/>
+    <ROW Component="SixLabors.Fonts.dll_5" ComponentId="{3E7E4808-8A26-4039-AB6E-CD89348ABCF9}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_5"/>
+    <ROW Component="SixLabors.Fonts.dll_6" ComponentId="{35577988-849F-4EA2-B953-5692C94CDB3B}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_6"/>
+    <ROW Component="SixLabors.Fonts.dll_7" ComponentId="{EF3F806E-3402-4318-AF77-0E59FE419484}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_7"/>
+    <ROW Component="System.AppContext.dll" ComponentId="{A3D47201-363F-45BA-BBDC-977C84E4F7D2}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.AppContext.dll"/>
+    <ROW Component="System.Buffers.dll" ComponentId="{5A3C3DAD-9146-4F13-ABEC-E0857F42BD4F}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Buffers.dll"/>
+    <ROW Component="System.Buffers.dll_1" ComponentId="{F97AF652-0B41-42A4-B005-C3730D19043F}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Buffers.dll_1"/>
+    <ROW Component="System.Buffers.dll_2" ComponentId="{74D5B015-2A3E-434E-8E70-FB78E79AAD59}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="System.Buffers.dll_2"/>
+    <ROW Component="System.Buffers.dll_3" ComponentId="{9F893F0A-0306-4FB4-9A34-A492ABCE4412}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="System.Buffers.dll_3"/>
+    <ROW Component="System.Buffers.dll_4" ComponentId="{F30C5E09-ABAB-4CFD-8E0C-667799151B47}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="System.Buffers.dll_4"/>
+    <ROW Component="System.Buffers.dll_5" ComponentId="{5F877E81-C8D9-43F9-B0AA-4DADADD67A53}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="System.Buffers.dll_5"/>
+    <ROW Component="System.Collections.Concurrent.dll" ComponentId="{77104CE2-69E5-4CB9-9AF2-657D575E047D}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Collections.Concurrent.dll"/>
+    <ROW Component="System.Collections.NonGeneric.dll" ComponentId="{DBDC0AEB-C502-409E-A32A-CC9936CF6E6A}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Collections.NonGeneric.dll"/>
+    <ROW Component="System.Collections.Specialized.dll" ComponentId="{75CC7AC2-32C9-44FD-8BC2-2510D4F6CAEB}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Collections.Specialized.dll"/>
+    <ROW Component="System.Collections.dll" ComponentId="{98813F79-1753-43CA-A119-D0505BA0801B}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Collections.dll"/>
+    <ROW Component="System.ComponentModel.EventBasedAsync.dll" ComponentId="{1BA5477C-5A7D-47E2-A33D-F9122A85067D}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.ComponentModel.EventBasedAsync.dll"/>
+    <ROW Component="System.ComponentModel.Primitives.dll" ComponentId="{56BAB8CA-E731-4E8F-8412-24F76A011900}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.ComponentModel.Primitives.dll"/>
+    <ROW Component="System.ComponentModel.TypeConverter.dll" ComponentId="{563A8EBC-AF7A-4632-AA92-52C3F22709EC}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.ComponentModel.TypeConverter.dll"/>
+    <ROW Component="System.ComponentModel.dll" ComponentId="{DEF96775-536E-4FE1-AD59-28F18540763C}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.ComponentModel.dll"/>
+    <ROW Component="System.Console.dll" ComponentId="{656D75CB-B36B-4B42-9D79-D90A3CB76EA7}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Console.dll"/>
+    <ROW Component="System.Data.Common.dll" ComponentId="{9ECE8FA0-0CE3-40CA-A6A0-6E00F1F3B54F}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Data.Common.dll"/>
+    <ROW Component="System.Data.Common.dll_1" ComponentId="{C80DBB8E-E1B4-4F24-90AE-4480BEC7563D}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Data.Common.dll_1"/>
+    <ROW Component="System.Diagnostics.Contracts.dll" ComponentId="{F408AD8B-2333-41C1-BB3D-4BE570EC72C7}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Diagnostics.Contracts.dll"/>
+    <ROW Component="System.Diagnostics.Debug.dll" ComponentId="{AFA7B2D1-E1EC-4506-B412-7BBCFE82E1C2}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Diagnostics.Debug.dll"/>
+    <ROW Component="System.Diagnostics.FileVersionInfo.dll" ComponentId="{6A3DD55E-3538-4823-AFCF-87BA51B71857}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Diagnostics.FileVersionInfo.dll"/>
+    <ROW Component="System.Diagnostics.Process.dll" ComponentId="{AA87D4B9-9092-4934-83CF-09D60DB036FC}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Diagnostics.Process.dll"/>
+    <ROW Component="System.Diagnostics.StackTrace.dll" ComponentId="{7B535F78-7EDB-4D61-9ADE-3D752617D348}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Diagnostics.StackTrace.dll"/>
+    <ROW Component="System.Diagnostics.StackTrace.dll_1" ComponentId="{46EB2DC8-2896-46E8-9A46-3D139AA1CB04}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Diagnostics.StackTrace.dll_1"/>
+    <ROW Component="System.Diagnostics.TextWriterTraceListener.dll" ComponentId="{646A3F05-A56D-4F0B-A591-F5560202E357}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Diagnostics.TextWriterTraceListener.dll"/>
+    <ROW Component="System.Diagnostics.Tools.dll" ComponentId="{43F6BC2E-1290-464B-8875-C44F320D7194}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Diagnostics.Tools.dll"/>
+    <ROW Component="System.Diagnostics.TraceSource.dll" ComponentId="{75DEDDF2-BB73-4765-B5B2-44C9FEF8DD25}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Diagnostics.TraceSource.dll"/>
+    <ROW Component="System.Diagnostics.Tracing.dll" ComponentId="{6239A670-4A7F-40AB-B92C-4A3EFF7D078C}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Diagnostics.Tracing.dll"/>
+    <ROW Component="System.Diagnostics.Tracing.dll_1" ComponentId="{C879FDA2-8289-4309-8EB5-1F58DE6CDC4D}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Diagnostics.Tracing.dll_1"/>
+    <ROW Component="System.Drawing.Primitives.dll" ComponentId="{D98EEC84-F13F-4338-8B5B-C4138A405035}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Drawing.Primitives.dll"/>
+    <ROW Component="System.Dynamic.Runtime.dll" ComponentId="{0E4A61E8-B177-4F3B-B8F6-0E42F8839EC0}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Dynamic.Runtime.dll"/>
+    <ROW Component="System.Globalization.Calendars.dll" ComponentId="{5E90032C-56F8-4888-9CB3-B5E960FC7A38}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Globalization.Calendars.dll"/>
+    <ROW Component="System.Globalization.Extensions.dll" ComponentId="{76AC99B5-6AAA-418F-8E8B-5A1E27DBEB90}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Globalization.Extensions.dll"/>
+    <ROW Component="System.Globalization.Extensions.dll_1" ComponentId="{6AE0C7C7-31C3-42CB-95E9-77EFDB8BA4C5}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Globalization.Extensions.dll_1"/>
+    <ROW Component="System.Globalization.dll" ComponentId="{85A5787B-2D5E-42EC-93E4-950B0338FEF6}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Globalization.dll"/>
+    <ROW Component="System.IO.Compression.ZipFile.dll" ComponentId="{4CBC2A7F-51FB-48B1-9A25-83F8AC46E382}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.Compression.ZipFile.dll"/>
+    <ROW Component="System.IO.Compression.dll" ComponentId="{D67865D5-6247-4024-BF36-DAB2C706F750}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.Compression.dll"/>
+    <ROW Component="System.IO.Compression.dll_1" ComponentId="{489A4E2B-FBC8-460A-B95B-25DB7279DC4A}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.IO.Compression.dll_1"/>
+    <ROW Component="System.IO.FileSystem.DriveInfo.dll" ComponentId="{F4ABDB86-5C70-4777-8FE6-2D78B93A7200}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.FileSystem.DriveInfo.dll"/>
+    <ROW Component="System.IO.FileSystem.Primitives.dll" ComponentId="{7BD905F8-CE1F-417B-8FB7-8892503850D8}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.FileSystem.Primitives.dll"/>
+    <ROW Component="System.IO.FileSystem.Watcher.dll" ComponentId="{504CAE83-B042-4270-AD8C-28DEEE1E07FA}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.FileSystem.Watcher.dll"/>
+    <ROW Component="System.IO.FileSystem.dll" ComponentId="{6CB04B54-C021-4B97-8090-DF0913BACA66}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.FileSystem.dll"/>
+    <ROW Component="System.IO.IsolatedStorage.dll" ComponentId="{45FCEA63-BC0E-49C5-A623-3AAE6D8AA718}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.IsolatedStorage.dll"/>
+    <ROW Component="System.IO.MemoryMappedFiles.dll" ComponentId="{199DBF67-C40A-4719-B4AE-108AEDDD09CB}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.MemoryMappedFiles.dll"/>
+    <ROW Component="System.IO.Packaging.dll" ComponentId="{C628389E-9BD8-4377-8948-AF5B835C90B4}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="System.IO.Packaging.dll"/>
+    <ROW Component="System.IO.Packaging.dll_1" ComponentId="{48DCEC86-102E-4E8C-ADF0-1DE174F30CA1}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="System.IO.Packaging.dll_1"/>
+    <ROW Component="System.IO.Pipes.dll" ComponentId="{BA67ABE9-C28C-42E5-AF7A-927097E9F6CB}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.Pipes.dll"/>
+    <ROW Component="System.IO.UnmanagedMemoryStream.dll" ComponentId="{C78B3A53-06AA-4F51-848B-D25608157B58}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.UnmanagedMemoryStream.dll"/>
+    <ROW Component="System.IO.dll" ComponentId="{EE630704-05FD-46E0-9C6D-E298257A100F}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.IO.dll"/>
+    <ROW Component="System.Linq.Expressions.dll" ComponentId="{0499D667-F74B-4F96-BD1C-754D6A4E0FFE}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Linq.Expressions.dll"/>
+    <ROW Component="System.Linq.Parallel.dll" ComponentId="{145F14F3-9506-4371-B915-25D8637F9887}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Linq.Parallel.dll"/>
+    <ROW Component="System.Linq.Queryable.dll" ComponentId="{852E81D7-3F8C-4762-99F0-E6A5EFF05B7A}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Linq.Queryable.dll"/>
+    <ROW Component="System.Linq.dll" ComponentId="{3DE84033-9806-4173-B13D-10447398BAAB}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Linq.dll"/>
+    <ROW Component="System.Memory.dll" ComponentId="{D8877810-1109-4093-A009-61E69C861A4E}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Memory.dll"/>
+    <ROW Component="System.Memory.dll_1" ComponentId="{A5D9AFDC-2D7B-4F00-934A-2519DF903A36}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Memory.dll_1"/>
+    <ROW Component="System.Memory.dll_2" ComponentId="{A78EBEF8-0D17-4FD6-B660-2C6310682169}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="System.Memory.dll_2"/>
+    <ROW Component="System.Memory.dll_3" ComponentId="{518CDBFB-B127-443C-B2B8-06C2052A6820}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="System.Memory.dll_3"/>
+    <ROW Component="System.Memory.dll_4" ComponentId="{64BAF4C8-9CC7-408A-B134-AFAB1721E964}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="System.Memory.dll_4"/>
+    <ROW Component="System.Memory.dll_5" ComponentId="{B871EF15-6631-4651-8C69-159D6B827720}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="System.Memory.dll_5"/>
+    <ROW Component="System.Net.Http.dll" ComponentId="{2D70E5AA-A369-458B-86A1-21F28A36A14E}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.Http.dll"/>
+    <ROW Component="System.Net.Http.dll_1" ComponentId="{85DF800A-39DE-4750-8677-2658E957ECB8}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Net.Http.dll_1"/>
+    <ROW Component="System.Net.NameResolution.dll" ComponentId="{E11EFD1E-71A7-41D2-9597-82B39AE66E7D}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.NameResolution.dll"/>
+    <ROW Component="System.Net.NetworkInformation.dll" ComponentId="{CE11F569-C380-41CA-A023-6593AA5B6DFE}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.NetworkInformation.dll"/>
+    <ROW Component="System.Net.Ping.dll" ComponentId="{8705304D-7BE4-44F4-A318-FB7996D8E350}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.Ping.dll"/>
+    <ROW Component="System.Net.Primitives.dll" ComponentId="{25805616-4EC0-44F8-839D-7EA6F5AB57A9}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.Primitives.dll"/>
+    <ROW Component="System.Net.Requests.dll" ComponentId="{8ADFB853-2D53-451C-A49D-5EAE9E9E3865}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.Requests.dll"/>
+    <ROW Component="System.Net.Security.dll" ComponentId="{756E9764-9C0C-47E5-81CF-EE8B93A75642}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.Security.dll"/>
+    <ROW Component="System.Net.Sockets.dll" ComponentId="{EA371CE2-BE61-4020-9C7C-FF189ED02A6B}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.Sockets.dll"/>
+    <ROW Component="System.Net.Sockets.dll_1" ComponentId="{6D2E1B6C-1C83-4AE7-AD49-98CFA1FE358F}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Net.Sockets.dll_1"/>
+    <ROW Component="System.Net.WebHeaderCollection.dll" ComponentId="{888F1BF9-2B67-4E37-8852-9BBC20C1A988}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.WebHeaderCollection.dll"/>
+    <ROW Component="System.Net.WebSockets.Client.dll" ComponentId="{906131F9-FBD0-4AA4-87B2-B36181B9BEE2}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.WebSockets.Client.dll"/>
+    <ROW Component="System.Net.WebSockets.dll" ComponentId="{EB6BF0DF-B681-4DBD-B76B-B346E2936905}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Net.WebSockets.dll"/>
+    <ROW Component="System.Numerics.Vectors.dll" ComponentId="{A1B064DF-8380-4368-A8BB-9D95CD6EBA73}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll"/>
+    <ROW Component="System.Numerics.Vectors.dll_1" ComponentId="{5C155004-0FC1-45AF-A8C0-A33638747A98}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll_1"/>
+    <ROW Component="System.Numerics.Vectors.dll_2" ComponentId="{39842387-8BCA-4516-83AF-E49D27E34D49}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll_2"/>
+    <ROW Component="System.Numerics.Vectors.dll_3" ComponentId="{30A33BB7-F431-4E27-AC5C-A83E26AA65B4}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll_3"/>
+    <ROW Component="System.Numerics.Vectors.dll_4" ComponentId="{0261F88B-80FF-4DE6-A56E-2E0DFE8580A9}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll_4"/>
+    <ROW Component="System.Numerics.Vectors.dll_5" ComponentId="{E1E40DE2-D6F3-4060-A09B-3E8C3D1E7C4C}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="System.Numerics.Vectors.dll_5"/>
+    <ROW Component="System.ObjectModel.dll" ComponentId="{96D9756B-7234-4C7A-A549-E4CD33079958}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.ObjectModel.dll"/>
+    <ROW Component="System.Reflection.Extensions.dll" ComponentId="{915FD0F6-6E21-4B00-8575-BEBE520AFA43}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Reflection.Extensions.dll"/>
+    <ROW Component="System.Reflection.Primitives.dll" ComponentId="{F05912B1-E3C0-4733-A992-7BC2AB5A5374}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Reflection.Primitives.dll"/>
+    <ROW Component="System.Reflection.dll" ComponentId="{F8ABAFD7-B6E0-4763-9C1A-BCEEB885E05D}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Reflection.dll"/>
+    <ROW Component="System.Resources.Reader.dll" ComponentId="{D0ACAA4A-163A-4614-A454-1B0479BE900B}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Resources.Reader.dll"/>
+    <ROW Component="System.Resources.ResourceManager.dll" ComponentId="{9A21C66B-9644-4EBB-94BD-FFF5B944B386}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Resources.ResourceManager.dll"/>
+    <ROW Component="System.Resources.Writer.dll" ComponentId="{1E5F4DC0-E079-4C12-B766-D5E09E4629FA}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Resources.Writer.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Un_1_safe.dll" ComponentId="{3F3FBB4D-A97C-4937-B0FD-E750372C7DA3}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Un_1_safe.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Un_2_safe.dll" ComponentId="{7BB7DA3F-821A-42BE-8BBF-7D47B38467B7}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Un_2_safe.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Un_3_safe.dll" ComponentId="{A5418EF7-93C8-41F2-9153-7AA2AEEF3ED8}" Directory_="ExportSchedule_2_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Un_3_safe.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Un_4_safe.dll" ComponentId="{C9460B64-0A0E-4A6E-BE20-A020666DC553}" Directory_="ExportSchedule_3_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Un_4_safe.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Un_5_safe.dll" ComponentId="{6008AB8A-7051-4854-8209-AD8C685732E1}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Un_5_safe.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll" ComponentId="{ECCD4C13-D783-4587-9F6E-43F098F810B0}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.VisualC.dll" ComponentId="{2B6083B5-1E21-49D7-A35E-492A2D125FE1}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.CompilerServices.VisualC.dll"/>
+    <ROW Component="System.Runtime.Extensions.dll" ComponentId="{B1FB1916-8706-4099-8412-559826787E12}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.Extensions.dll"/>
+    <ROW Component="System.Runtime.Handles.dll" ComponentId="{9E7C0CEA-80EF-4194-9618-321682640B0C}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.Handles.dll"/>
+    <ROW Component="System.Runtime.InteropServices.RuntimeInformation.dll" ComponentId="{208818C4-5FAB-4CFF-A0CF-31C0ECA02CBE}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.InteropServices.RuntimeInformation.dll"/>
+    <ROW Component="System.Runtime.InteropServices.dll" ComponentId="{09A44BC5-67B1-48DD-900C-FD14CD4A7E29}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.InteropServices.dll"/>
+    <ROW Component="System.Runtime.Numerics.dll" ComponentId="{886A4EF9-83DD-4FC7-A796-82D5A9F7D3CB}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.Numerics.dll"/>
+    <ROW Component="System.Runtime.Serialization.Formatters.dll" ComponentId="{4E1CE265-56A5-44E7-81A3-B355D26C1E77}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.Serialization.Formatters.dll"/>
+    <ROW Component="System.Runtime.Serialization.Json.dll" ComponentId="{65AF6433-E983-4A27-BC0E-A5D95FD60211}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.Serialization.Json.dll"/>
+    <ROW Component="System.Runtime.Serialization.Primi_1_tives.dll" ComponentId="{496B1670-8EE3-4C39-9BFA-E45215E57595}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Runtime.Serialization.Primi_1_tives.dll"/>
+    <ROW Component="System.Runtime.Serialization.Primitives.dll" ComponentId="{030317C9-D368-4B43-A16E-E31B4E22C049}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.Serialization.Primitives.dll"/>
+    <ROW Component="System.Runtime.Serialization.Xml.dll" ComponentId="{67DAE285-DE72-4B23-8CCA-92160CEA26BC}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.Serialization.Xml.dll"/>
+    <ROW Component="System.Runtime.dll" ComponentId="{8E7C2421-EF3A-4FCD-B4C9-9407EFAF41CB}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Runtime.dll"/>
+    <ROW Component="System.Security.Claims.dll" ComponentId="{D9980767-26CF-4774-9D45-53E166AD9790}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Security.Claims.dll"/>
+    <ROW Component="System.Security.Cryptography.Algor_1_ithms.dll" ComponentId="{C9702D9F-6142-4753-BC58-C8BA3969AA4E}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Security.Cryptography.Algor_1_ithms.dll"/>
+    <ROW Component="System.Security.Cryptography.Algorithms.dll" ComponentId="{A3641CDF-D424-45BC-97A2-318EE0DF58DC}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Security.Cryptography.Algorithms.dll"/>
+    <ROW Component="System.Security.Cryptography.Csp.dll" ComponentId="{ABBA7D25-261F-4DD9-B436-9A6F2413016C}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Security.Cryptography.Csp.dll"/>
+    <ROW Component="System.Security.Cryptography.Encoding.dll" ComponentId="{FF4199B3-425F-4894-A512-29F990537F96}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Security.Cryptography.Encoding.dll"/>
+    <ROW Component="System.Security.Cryptography.Primitives.dll" ComponentId="{7AB53B0C-7BBC-4CBE-86F3-2974A8118B2E}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Security.Cryptography.Primitives.dll"/>
+    <ROW Component="System.Security.Cryptography.X509Certificates.dll" ComponentId="{4F1E833B-F205-41F7-B96E-587825F82D4C}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Security.Cryptography.X509Certificates.dll"/>
+    <ROW Component="System.Security.Principal.dll" ComponentId="{FF2458AB-8F79-40DD-B4B1-C2FBEFFB2235}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Security.Principal.dll"/>
+    <ROW Component="System.Security.SecureString.dll" ComponentId="{86BD242A-FD87-4BF0-8082-495BFDC14BBC}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Security.SecureString.dll"/>
+    <ROW Component="System.Security.SecureString.dll_1" ComponentId="{6F5E8580-9013-46D9-A5E5-F0A09BE0D322}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Security.SecureString.dll_1"/>
+    <ROW Component="System.Text.Encoding.Extensions.dll" ComponentId="{C8776891-5226-4964-A862-138FD86CDB08}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Text.Encoding.Extensions.dll"/>
+    <ROW Component="System.Text.Encoding.dll" ComponentId="{5C299628-1AD8-406B-A161-96F073087E2D}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Text.Encoding.dll"/>
+    <ROW Component="System.Text.RegularExpressions.dll" ComponentId="{50FDA0E1-D8E4-4013-8E4A-4E0394F323FC}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Text.RegularExpressions.dll"/>
+    <ROW Component="System.Threading.Overlapped.dll" ComponentId="{4F70C918-2493-4CD6-A2D5-22B2E19F5B87}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Threading.Overlapped.dll"/>
+    <ROW Component="System.Threading.Overlapped.dll_1" ComponentId="{1E62CBC1-C283-4BEB-A98C-3A1E606C996A}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Threading.Overlapped.dll_1"/>
+    <ROW Component="System.Threading.Tasks.Parallel.dll" ComponentId="{8401880C-F57F-4B94-8020-22D530B07889}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Threading.Tasks.Parallel.dll"/>
+    <ROW Component="System.Threading.Tasks.dll" ComponentId="{6A39F3A3-B405-4A0B-88FE-EA1D6F061D34}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Threading.Tasks.dll"/>
+    <ROW Component="System.Threading.Thread.dll" ComponentId="{01E33184-7525-48B4-9071-079C4DEB593C}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Threading.Thread.dll"/>
+    <ROW Component="System.Threading.ThreadPool.dll" ComponentId="{84F4B34A-D36C-4D38-9291-0014C4BB996C}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Threading.ThreadPool.dll"/>
+    <ROW Component="System.Threading.Timer.dll" ComponentId="{ECF6CCF7-7F07-4C3F-9CBC-383A92E51510}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Threading.Timer.dll"/>
+    <ROW Component="System.Threading.dll" ComponentId="{831B28B7-8922-4718-84EC-817649C000B6}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Threading.dll"/>
+    <ROW Component="System.ValueTuple.dll" ComponentId="{F52905DE-BC57-4C55-BAEB-038DF44C09BB}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.ValueTuple.dll"/>
+    <ROW Component="System.Xml.ReaderWriter.dll" ComponentId="{B12AA4BC-8995-4741-A6F9-D421604A0840}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Xml.ReaderWriter.dll"/>
+    <ROW Component="System.Xml.XDocument.dll" ComponentId="{D959A3E0-7E79-4975-B9DD-09456BB547E3}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Xml.XDocument.dll"/>
+    <ROW Component="System.Xml.XPath.XDocument.dll" ComponentId="{83AD4C23-E6C1-4788-A9CA-B9D1A4C61812}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Xml.XPath.XDocument.dll"/>
+    <ROW Component="System.Xml.XPath.XDocument.dll_1" ComponentId="{A8207762-7F2B-4EA9-A65E-10A24421ADF1}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Xml.XPath.XDocument.dll_1"/>
+    <ROW Component="System.Xml.XPath.dll" ComponentId="{627533C6-8878-4AC6-8FA9-2BB5F2FC2FD4}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Xml.XPath.dll"/>
+    <ROW Component="System.Xml.XmlDocument.dll" ComponentId="{23E9179B-4D47-49DF-9167-CF1B57AED806}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Xml.XmlDocument.dll"/>
+    <ROW Component="System.Xml.XmlSerializer.dll" ComponentId="{C703BB3B-6A74-4710-A0C9-5BE710F815C4}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Xml.XmlSerializer.dll"/>
+    <ROW Component="netstandard.dll" ComponentId="{DCED789C-D277-49DD-9D47-40C3509F77DC}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="netstandard.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -113,52 +275,215 @@
     <ROW File="ExportSchedule.addin_2" Component_="ExportSchedule.addin_2" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\ExportSchedule.addin" SelfReg="false"/>
     <ROW File="ExportSchedule.addin_3" Component_="ExportSchedule.addin_3" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\ExportSchedule.addin" SelfReg="false"/>
     <ROW File="ExportSchedule.addin_4" Component_="ExportSchedule.addin_4" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\ExportSchedule.addin" SelfReg="false"/>
-    <ROW File="EPPlus.Interfaces.dll" Component_="EPPlus.Interfaces.dll" FileName="EPPLUS~1.DLL|EPPlus.Interfaces.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\EPPlus.Interfaces.dll" SelfReg="false"/>
-    <ROW File="EPPlus.System.Drawing.dll" Component_="EPPlus.System.Drawing.dll" FileName="EPPLUS~2.DLL|EPPlus.System.Drawing.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\EPPlus.System.Drawing.dll" SelfReg="false"/>
     <ROW File="ExportSchedule.dll" Component_="ExportSchedule.dll" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll" Component_="Microsoft.IO.RecyclableMemoryStream.dll" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll" Component_="EPPlus.dll" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\EPPlus.dll" SelfReg="false"/>
-    <ROW File="EPPlus.System.Drawing.dll_1" Component_="EPPlus.System.Drawing.dll_1" FileName="EPPLUS~1.DLL|EPPlus.System.Drawing.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\EPPlus.System.Drawing.dll" SelfReg="false"/>
     <ROW File="ExportSchedule.dll_1" Component_="ExportSchedule.dll_1" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_1" Component_="Microsoft.IO.RecyclableMemoryStream.dll_1" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll_1" Component_="EPPlus.dll_1" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\EPPlus.dll" SelfReg="false"/>
-    <ROW File="EPPlus.Interfaces.dll_1" Component_="EPPlus.Interfaces.dll_1" FileName="EPPLUS~2.DLL|EPPlus.Interfaces.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\EPPlus.Interfaces.dll" SelfReg="false"/>
-    <ROW File="EPPlus.System.Drawing.dll_2" Component_="EPPlus.System.Drawing.dll_2" FileName="EPPLUS~1.DLL|EPPlus.System.Drawing.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\EPPlus.System.Drawing.dll" SelfReg="false"/>
     <ROW File="ExportSchedule.dll_2" Component_="ExportSchedule.dll_2" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_2" Component_="Microsoft.IO.RecyclableMemoryStream.dll_2" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll_2" Component_="EPPlus.dll_2" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\EPPlus.dll" SelfReg="false"/>
-    <ROW File="EPPlus.Interfaces.dll_2" Component_="EPPlus.Interfaces.dll_2" FileName="EPPLUS~2.DLL|EPPlus.Interfaces.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\EPPlus.Interfaces.dll" SelfReg="false"/>
-    <ROW File="EPPlus.System.Drawing.dll_3" Component_="EPPlus.System.Drawing.dll_3" FileName="EPPLUS~1.DLL|EPPlus.System.Drawing.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\EPPlus.System.Drawing.dll" SelfReg="false"/>
     <ROW File="ExportSchedule.dll_3" Component_="ExportSchedule.dll_3" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_3" Component_="Microsoft.IO.RecyclableMemoryStream.dll_3" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll_3" Component_="EPPlus.dll_3" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\EPPlus.dll" SelfReg="false"/>
-    <ROW File="EPPlus.Interfaces.dll_3" Component_="EPPlus.Interfaces.dll_3" FileName="EPPLUS~2.DLL|EPPlus.Interfaces.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\EPPlus.Interfaces.dll" SelfReg="false"/>
-    <ROW File="EPPlus.System.Drawing.dll_4" Component_="EPPlus.System.Drawing.dll_4" FileName="EPPLUS~1.DLL|EPPlus.System.Drawing.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\EPPlus.System.Drawing.dll" SelfReg="false"/>
     <ROW File="ExportSchedule.dll_4" Component_="ExportSchedule.dll_4" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream.dll_4" Component_="Microsoft.IO.RecyclableMemoryStream.dll_4" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
-    <ROW File="EPPlus.dll_4" Component_="EPPlus.dll_4" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\EPPlus.dll" SelfReg="false"/>
-    <ROW File="EPPlus.Interfaces.dll_4" Component_="EPPlus.Interfaces.dll_4" FileName="EPPLUS~2.DLL|EPPlus.Interfaces.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\EPPlus.Interfaces.dll" SelfReg="false"/>
     <ROW File="ExportSchedule.addin_5" Component_="ExportSchedule.addin_5" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\ExportSchedule.addin" SelfReg="false"/>
-    <ROW File="EPPlus.dll_5" Component_="EPPlus.dll_5" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\EPPlus.dll" SelfReg="false"/>
-    <ROW File="EPPlus.Interfaces.dll_5" Component_="EPPlus.Interfaces.dll_5" FileName="EPPLUS~1.DLL|EPPlus.Interfaces.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\EPPlus.Interfaces.dll" SelfReg="false"/>
-    <ROW File="EPPlus.System.Drawing.dll_5" Component_="EPPlus.System.Drawing.dll_5" FileName="EPPLUS~2.DLL|EPPlus.System.Drawing.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\EPPlus.System.Drawing.dll" SelfReg="false"/>
     <ROW File="ExportSchedule.deps.json" Component_="ExportSchedule.deps.json" FileName="EXPORT~1.JSO|ExportSchedule.deps.json" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\ExportSchedule.deps.json" SelfReg="false"/>
     <ROW File="ExportSchedule.dll_5" Component_="ExportSchedule.dll_5" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Configuration.Abstractions.dll" Component_="Microsoft.Extensions.Configuration.Abstractions.dll" FileName="MICROS~1.DLL|Microsoft.Extensions.Configuration.Abstractions.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\Microsoft.Extensions.Configuration.Abstractions.dll" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Configuration.dll" Component_="Microsoft.Extensions.Configuration.dll" FileName="MICROS~2.DLL|Microsoft.Extensions.Configuration.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\Microsoft.Extensions.Configuration.dll" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Configuration.FileExtensions.dll" Component_="Microsoft.Extensions.Configuration.FileExtensions.dll" FileName="MICROS~3.DLL|Microsoft.Extensions.Configuration.FileExtensions.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\Microsoft.Extensions.Configuration.FileExtensions.dll" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Configuration.Json.dll" Component_="Microsoft.Extensions.Configuration.Json.dll" FileName="MICROS~4.DLL|Microsoft.Extensions.Configuration.Json.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\Microsoft.Extensions.Configuration.Json.dll" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.FileProviders.Abstractions.dll" Component_="Microsoft.Extensions.FileProviders.Abstractions.dll" FileName="MICROS~5.DLL|Microsoft.Extensions.FileProviders.Abstractions.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\Microsoft.Extensions.FileProviders.Abstractions.dll" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.FileProviders.Physical.dll" Component_="Microsoft.Extensions.FileProviders.Physical.dll" FileName="MICROS~6.DLL|Microsoft.Extensions.FileProviders.Physical.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\Microsoft.Extensions.FileProviders.Physical.dll" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.FileSystemGlobbing.dll" Component_="Microsoft.Extensions.FileSystemGlobbing.dll" FileName="MICROS~7.DLL|Microsoft.Extensions.FileSystemGlobbing.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\Microsoft.Extensions.FileSystemGlobbing.dll" SelfReg="false"/>
-    <ROW File="Microsoft.Extensions.Primitives.dll" Component_="Microsoft.Extensions.Primitives.dll" FileName="MICROS~8.DLL|Microsoft.Extensions.Primitives.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\Microsoft.Extensions.Primitives.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream._1_dll" Component_="Microsoft.IO.RecyclableMemoryStream._1_dll" FileName="MICROS~9.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
     <ROW File="ExportSchedule.addin_6" Component_="ExportSchedule.addin_6" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\ExportSchedule.addin" SelfReg="false"/>
-    <ROW File="EPPlus.dll_6" Component_="EPPlus.dll_6" FileName="EPPlus.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\EPPlus.dll" SelfReg="false"/>
-    <ROW File="EPPlus.Interfaces.dll_6" Component_="EPPlus.Interfaces.dll_6" FileName="EPPLUS~1.DLL|EPPlus.Interfaces.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\EPPlus.Interfaces.dll" SelfReg="false"/>
-    <ROW File="EPPlus.System.Drawing.dll_6" Component_="EPPlus.System.Drawing.dll_6" FileName="EPPLUS~2.DLL|EPPlus.System.Drawing.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\EPPlus.System.Drawing.dll" SelfReg="false"/>
     <ROW File="ExportSchedule.dll_6" Component_="ExportSchedule.dll_6" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\ExportSchedule.dll" SelfReg="false"/>
-    <ROW File="Microsoft.IO.RecyclableMemoryStream._2_dll" Component_="Microsoft.IO.RecyclableMemoryStream._2_dll" FileName="MICROS~1.DLL|Microsoft.IO.RecyclableMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\Microsoft.IO.RecyclableMemoryStream.dll" SelfReg="false"/>
+    <ROW File="ExportSchedule.deps.json_1" Component_="ExportSchedule.deps.json_1" FileName="EXPORT~1.JSO|ExportSchedule.deps.json" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\ExportSchedule.deps.json" SelfReg="false"/>
+    <ROW File="ExportSchedule.dll_7" Component_="ExportSchedule.dll_7" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\ExportSchedule.dll" SelfReg="false"/>
+    <ROW File="ExportSchedule.addin_7" Component_="ExportSchedule.addin_7" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\ExportSchedule.addin" SelfReg="false"/>
+    <ROW File="ClosedXML.dll" Component_="ClosedXML.dll" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\ClosedXML.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.Parser.dll" Component_="ClosedXML.Parser.dll" FileName="CLOSED~2.DLL|ClosedXML.Parser.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\ClosedXML.Parser.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll" Component_="DocumentFormat.OpenXml.dll" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.dll" Component_="DocumentFormat.OpenXml.Framework.dll" FileName="DOCUME~2.DLL|DocumentFormat.OpenXml.Framework.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\DocumentFormat.OpenXml.Framework.dll" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll" Component_="ExcelNumberFormat.dll" FileName="EXCELN~1.DLL|ExcelNumberFormat.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\ExcelNumberFormat.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.HashCode.dll" Component_="Microsoft.Bcl.HashCode.dll" FileName="MICROS~1.DLL|Microsoft.Bcl.HashCode.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\Microsoft.Bcl.HashCode.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Win32.Primitives.dll" Component_="Microsoft.Win32.Primitives.dll" FileName="MICROS~2.DLL|Microsoft.Win32.Primitives.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\Microsoft.Win32.Primitives.dll" SelfReg="false"/>
+    <ROW File="netstandard.dll" Component_="netstandard.dll" FileName="NETSTA~1.DLL|netstandard.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\netstandard.dll" SelfReg="false"/>
+    <ROW File="RBush.dll" Component_="RBush.dll" FileName="RBush.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\RBush.dll" SelfReg="false"/>
+    <ROW File="SixLabors.Fonts.dll" Component_="SixLabors.Fonts.dll" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\SixLabors.Fonts.dll" SelfReg="false"/>
+    <ROW File="System.AppContext.dll" Component_="System.AppContext.dll" FileName="SYSTEM~1.DLL|System.AppContext.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.AppContext.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll" Component_="System.Buffers.dll" FileName="SYSTEM~2.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Collections.Concurrent.dll" Component_="System.Collections.Concurrent.dll" FileName="SYSTEM~3.DLL|System.Collections.Concurrent.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Collections.Concurrent.dll" SelfReg="false"/>
+    <ROW File="System.Collections.dll" Component_="System.Collections.dll" FileName="SYSTEM~4.DLL|System.Collections.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Collections.dll" SelfReg="false"/>
+    <ROW File="System.Collections.NonGeneric.dll" Component_="System.Collections.NonGeneric.dll" FileName="SYSTEM~5.DLL|System.Collections.NonGeneric.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Collections.NonGeneric.dll" SelfReg="false"/>
+    <ROW File="System.Collections.Specialized.dll" Component_="System.Collections.Specialized.dll" FileName="SYSTEM~6.DLL|System.Collections.Specialized.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Collections.Specialized.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.dll" Component_="System.ComponentModel.dll" FileName="SYSTEM~7.DLL|System.ComponentModel.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.ComponentModel.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.EventBasedAsync.dll" Component_="System.ComponentModel.EventBasedAsync.dll" FileName="SYSTEM~8.DLL|System.ComponentModel.EventBasedAsync.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.ComponentModel.EventBasedAsync.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.Primitives.dll" Component_="System.ComponentModel.Primitives.dll" FileName="SYSTEM~9.DLL|System.ComponentModel.Primitives.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.ComponentModel.Primitives.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.TypeConverter.dll" Component_="System.ComponentModel.TypeConverter.dll" FileName="SYSTE~10.DLL|System.ComponentModel.TypeConverter.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.ComponentModel.TypeConverter.dll" SelfReg="false"/>
+    <ROW File="System.Console.dll" Component_="System.Console.dll" FileName="SYSTE~11.DLL|System.Console.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Console.dll" SelfReg="false"/>
+    <ROW File="System.Data.Common.dll" Component_="System.Data.Common.dll" FileName="SYSTE~12.DLL|System.Data.Common.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Data.Common.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.Contracts.dll" Component_="System.Diagnostics.Contracts.dll" FileName="SYSTE~13.DLL|System.Diagnostics.Contracts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Diagnostics.Contracts.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.Debug.dll" Component_="System.Diagnostics.Debug.dll" FileName="SYSTE~14.DLL|System.Diagnostics.Debug.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Diagnostics.Debug.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.FileVersionInfo.dll" Component_="System.Diagnostics.FileVersionInfo.dll" FileName="SYSTE~15.DLL|System.Diagnostics.FileVersionInfo.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Diagnostics.FileVersionInfo.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.Process.dll" Component_="System.Diagnostics.Process.dll" FileName="SYSTE~16.DLL|System.Diagnostics.Process.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Diagnostics.Process.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.StackTrace.dll" Component_="System.Diagnostics.StackTrace.dll" FileName="SYSTE~17.DLL|System.Diagnostics.StackTrace.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Diagnostics.StackTrace.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.TextWriterTraceListener.dll" Component_="System.Diagnostics.TextWriterTraceListener.dll" FileName="SYSTE~18.DLL|System.Diagnostics.TextWriterTraceListener.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Diagnostics.TextWriterTraceListener.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.Tools.dll" Component_="System.Diagnostics.Tools.dll" FileName="SYSTE~19.DLL|System.Diagnostics.Tools.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Diagnostics.Tools.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.TraceSource.dll" Component_="System.Diagnostics.TraceSource.dll" FileName="SYSTE~20.DLL|System.Diagnostics.TraceSource.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Diagnostics.TraceSource.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.Tracing.dll" Component_="System.Diagnostics.Tracing.dll" FileName="SYSTE~21.DLL|System.Diagnostics.Tracing.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Diagnostics.Tracing.dll" SelfReg="false"/>
+    <ROW File="System.Drawing.Primitives.dll" Component_="System.Drawing.Primitives.dll" FileName="SYSTE~22.DLL|System.Drawing.Primitives.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Drawing.Primitives.dll" SelfReg="false"/>
+    <ROW File="System.Dynamic.Runtime.dll" Component_="System.Dynamic.Runtime.dll" FileName="SYSTE~23.DLL|System.Dynamic.Runtime.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Dynamic.Runtime.dll" SelfReg="false"/>
+    <ROW File="System.Globalization.Calendars.dll" Component_="System.Globalization.Calendars.dll" FileName="SYSTE~24.DLL|System.Globalization.Calendars.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Globalization.Calendars.dll" SelfReg="false"/>
+    <ROW File="System.Globalization.dll" Component_="System.Globalization.dll" FileName="SYSTE~25.DLL|System.Globalization.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Globalization.dll" SelfReg="false"/>
+    <ROW File="System.Globalization.Extensions.dll" Component_="System.Globalization.Extensions.dll" FileName="SYSTE~26.DLL|System.Globalization.Extensions.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Globalization.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.IO.Compression.dll" Component_="System.IO.Compression.dll" FileName="SYSTE~27.DLL|System.IO.Compression.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.Compression.dll" SelfReg="false"/>
+    <ROW File="System.IO.Compression.ZipFile.dll" Component_="System.IO.Compression.ZipFile.dll" FileName="SYSTE~28.DLL|System.IO.Compression.ZipFile.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.Compression.ZipFile.dll" SelfReg="false"/>
+    <ROW File="System.IO.dll" Component_="System.IO.dll" FileName="SYSTE~29.DLL|System.IO.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.dll" SelfReg="false"/>
+    <ROW File="System.IO.FileSystem.dll" Component_="System.IO.FileSystem.dll" FileName="SYSTE~30.DLL|System.IO.FileSystem.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.FileSystem.dll" SelfReg="false"/>
+    <ROW File="System.IO.FileSystem.DriveInfo.dll" Component_="System.IO.FileSystem.DriveInfo.dll" FileName="SYSTE~31.DLL|System.IO.FileSystem.DriveInfo.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.FileSystem.DriveInfo.dll" SelfReg="false"/>
+    <ROW File="System.IO.FileSystem.Primitives.dll" Component_="System.IO.FileSystem.Primitives.dll" FileName="SYSTE~32.DLL|System.IO.FileSystem.Primitives.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.FileSystem.Primitives.dll" SelfReg="false"/>
+    <ROW File="System.IO.FileSystem.Watcher.dll" Component_="System.IO.FileSystem.Watcher.dll" FileName="SYSTE~33.DLL|System.IO.FileSystem.Watcher.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.FileSystem.Watcher.dll" SelfReg="false"/>
+    <ROW File="System.IO.IsolatedStorage.dll" Component_="System.IO.IsolatedStorage.dll" FileName="SYSTE~34.DLL|System.IO.IsolatedStorage.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.IsolatedStorage.dll" SelfReg="false"/>
+    <ROW File="System.IO.MemoryMappedFiles.dll" Component_="System.IO.MemoryMappedFiles.dll" FileName="SYSTE~35.DLL|System.IO.MemoryMappedFiles.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.MemoryMappedFiles.dll" SelfReg="false"/>
+    <ROW File="System.IO.Pipes.dll" Component_="System.IO.Pipes.dll" FileName="SYSTE~36.DLL|System.IO.Pipes.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.Pipes.dll" SelfReg="false"/>
+    <ROW File="System.IO.UnmanagedMemoryStream.dll" Component_="System.IO.UnmanagedMemoryStream.dll" FileName="SYSTE~37.DLL|System.IO.UnmanagedMemoryStream.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.IO.UnmanagedMemoryStream.dll" SelfReg="false"/>
+    <ROW File="System.Linq.dll" Component_="System.Linq.dll" FileName="SYSTE~38.DLL|System.Linq.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Linq.dll" SelfReg="false"/>
+    <ROW File="System.Linq.Expressions.dll" Component_="System.Linq.Expressions.dll" FileName="SYSTE~39.DLL|System.Linq.Expressions.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Linq.Expressions.dll" SelfReg="false"/>
+    <ROW File="System.Linq.Parallel.dll" Component_="System.Linq.Parallel.dll" FileName="SYSTE~40.DLL|System.Linq.Parallel.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Linq.Parallel.dll" SelfReg="false"/>
+    <ROW File="System.Linq.Queryable.dll" Component_="System.Linq.Queryable.dll" FileName="SYSTE~41.DLL|System.Linq.Queryable.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Linq.Queryable.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll" Component_="System.Memory.dll" FileName="SYSTE~42.DLL|System.Memory.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Net.Http.dll" Component_="System.Net.Http.dll" FileName="SYSTE~43.DLL|System.Net.Http.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.Http.dll" SelfReg="false"/>
+    <ROW File="System.Net.NameResolution.dll" Component_="System.Net.NameResolution.dll" FileName="SYSTE~44.DLL|System.Net.NameResolution.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.NameResolution.dll" SelfReg="false"/>
+    <ROW File="System.Net.NetworkInformation.dll" Component_="System.Net.NetworkInformation.dll" FileName="SYSTE~45.DLL|System.Net.NetworkInformation.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.NetworkInformation.dll" SelfReg="false"/>
+    <ROW File="System.Net.Ping.dll" Component_="System.Net.Ping.dll" FileName="SYSTE~46.DLL|System.Net.Ping.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.Ping.dll" SelfReg="false"/>
+    <ROW File="System.Net.Primitives.dll" Component_="System.Net.Primitives.dll" FileName="SYSTE~47.DLL|System.Net.Primitives.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.Primitives.dll" SelfReg="false"/>
+    <ROW File="System.Net.Requests.dll" Component_="System.Net.Requests.dll" FileName="SYSTE~48.DLL|System.Net.Requests.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.Requests.dll" SelfReg="false"/>
+    <ROW File="System.Net.Security.dll" Component_="System.Net.Security.dll" FileName="SYSTE~49.DLL|System.Net.Security.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.Security.dll" SelfReg="false"/>
+    <ROW File="System.Net.Sockets.dll" Component_="System.Net.Sockets.dll" FileName="SYSTE~50.DLL|System.Net.Sockets.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.Sockets.dll" SelfReg="false"/>
+    <ROW File="System.Net.WebHeaderCollection.dll" Component_="System.Net.WebHeaderCollection.dll" FileName="SYSTE~51.DLL|System.Net.WebHeaderCollection.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.WebHeaderCollection.dll" SelfReg="false"/>
+    <ROW File="System.Net.WebSockets.Client.dll" Component_="System.Net.WebSockets.Client.dll" FileName="SYSTE~52.DLL|System.Net.WebSockets.Client.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.WebSockets.Client.dll" SelfReg="false"/>
+    <ROW File="System.Net.WebSockets.dll" Component_="System.Net.WebSockets.dll" FileName="SYSTE~53.DLL|System.Net.WebSockets.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Net.WebSockets.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll" Component_="System.Numerics.Vectors.dll" FileName="SYSTE~54.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.ObjectModel.dll" Component_="System.ObjectModel.dll" FileName="SYSTE~55.DLL|System.ObjectModel.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.ObjectModel.dll" SelfReg="false"/>
+    <ROW File="System.Reflection.dll" Component_="System.Reflection.dll" FileName="SYSTE~56.DLL|System.Reflection.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Reflection.dll" SelfReg="false"/>
+    <ROW File="System.Reflection.Extensions.dll" Component_="System.Reflection.Extensions.dll" FileName="SYSTE~57.DLL|System.Reflection.Extensions.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Reflection.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.Reflection.Primitives.dll" Component_="System.Reflection.Primitives.dll" FileName="SYSTE~58.DLL|System.Reflection.Primitives.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Reflection.Primitives.dll" SelfReg="false"/>
+    <ROW File="System.Resources.Reader.dll" Component_="System.Resources.Reader.dll" FileName="SYSTE~59.DLL|System.Resources.Reader.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Resources.Reader.dll" SelfReg="false"/>
+    <ROW File="System.Resources.ResourceManager.dll" Component_="System.Resources.ResourceManager.dll" FileName="SYSTE~60.DLL|System.Resources.ResourceManager.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Resources.ResourceManager.dll" SelfReg="false"/>
+    <ROW File="System.Resources.Writer.dll" Component_="System.Resources.Writer.dll" FileName="SYSTE~61.DLL|System.Resources.Writer.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Resources.Writer.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.dll" Component_="System.Runtime.CompilerServices.Unsafe.dll" FileName="SYSTE~62.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.VisualC.dll" Component_="System.Runtime.CompilerServices.VisualC.dll" FileName="SYSTE~63.DLL|System.Runtime.CompilerServices.VisualC.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.CompilerServices.VisualC.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.dll" Component_="System.Runtime.dll" FileName="SYSTE~64.DLL|System.Runtime.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.Extensions.dll" Component_="System.Runtime.Extensions.dll" FileName="SYSTE~65.DLL|System.Runtime.Extensions.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.Handles.dll" Component_="System.Runtime.Handles.dll" FileName="SYSTE~66.DLL|System.Runtime.Handles.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.Handles.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.InteropServices.dll" Component_="System.Runtime.InteropServices.dll" FileName="SYSTE~67.DLL|System.Runtime.InteropServices.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.InteropServices.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.InteropServices.RuntimeInformation.dll" Component_="System.Runtime.InteropServices.RuntimeInformation.dll" FileName="SYSTE~68.DLL|System.Runtime.InteropServices.RuntimeInformation.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.InteropServices.RuntimeInformation.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.Numerics.dll" Component_="System.Runtime.Numerics.dll" FileName="SYSTE~69.DLL|System.Runtime.Numerics.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.Numerics.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.Serialization.Formatters.dll" Component_="System.Runtime.Serialization.Formatters.dll" FileName="SYSTE~70.DLL|System.Runtime.Serialization.Formatters.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.Serialization.Formatters.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.Serialization.Json.dll" Component_="System.Runtime.Serialization.Json.dll" FileName="SYSTE~71.DLL|System.Runtime.Serialization.Json.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.Serialization.Json.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.Serialization.Primitives.dll" Component_="System.Runtime.Serialization.Primitives.dll" FileName="SYSTE~72.DLL|System.Runtime.Serialization.Primitives.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.Serialization.Primitives.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.Serialization.Xml.dll" Component_="System.Runtime.Serialization.Xml.dll" FileName="SYSTE~73.DLL|System.Runtime.Serialization.Xml.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Runtime.Serialization.Xml.dll" SelfReg="false"/>
+    <ROW File="System.Security.Claims.dll" Component_="System.Security.Claims.dll" FileName="SYSTE~74.DLL|System.Security.Claims.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Security.Claims.dll" SelfReg="false"/>
+    <ROW File="System.Security.Cryptography.Algorithms.dll" Component_="System.Security.Cryptography.Algorithms.dll" FileName="SYSTE~75.DLL|System.Security.Cryptography.Algorithms.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Security.Cryptography.Algorithms.dll" SelfReg="false"/>
+    <ROW File="System.Security.Cryptography.Csp.dll" Component_="System.Security.Cryptography.Csp.dll" FileName="SYSTE~76.DLL|System.Security.Cryptography.Csp.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Security.Cryptography.Csp.dll" SelfReg="false"/>
+    <ROW File="System.Security.Cryptography.Encoding.dll" Component_="System.Security.Cryptography.Encoding.dll" FileName="SYSTE~77.DLL|System.Security.Cryptography.Encoding.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Security.Cryptography.Encoding.dll" SelfReg="false"/>
+    <ROW File="System.Security.Cryptography.Primitives.dll" Component_="System.Security.Cryptography.Primitives.dll" FileName="SYSTE~78.DLL|System.Security.Cryptography.Primitives.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Security.Cryptography.Primitives.dll" SelfReg="false"/>
+    <ROW File="System.Security.Cryptography.X509Certificates.dll" Component_="System.Security.Cryptography.X509Certificates.dll" FileName="SYSTE~79.DLL|System.Security.Cryptography.X509Certificates.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Security.Cryptography.X509Certificates.dll" SelfReg="false"/>
+    <ROW File="System.Security.Principal.dll" Component_="System.Security.Principal.dll" FileName="SYSTE~80.DLL|System.Security.Principal.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Security.Principal.dll" SelfReg="false"/>
+    <ROW File="System.Security.SecureString.dll" Component_="System.Security.SecureString.dll" FileName="SYSTE~81.DLL|System.Security.SecureString.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Security.SecureString.dll" SelfReg="false"/>
+    <ROW File="System.Text.Encoding.dll" Component_="System.Text.Encoding.dll" FileName="SYSTE~82.DLL|System.Text.Encoding.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Text.Encoding.dll" SelfReg="false"/>
+    <ROW File="System.Text.Encoding.Extensions.dll" Component_="System.Text.Encoding.Extensions.dll" FileName="SYSTE~83.DLL|System.Text.Encoding.Extensions.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Text.Encoding.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.Text.RegularExpressions.dll" Component_="System.Text.RegularExpressions.dll" FileName="SYSTE~84.DLL|System.Text.RegularExpressions.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Text.RegularExpressions.dll" SelfReg="false"/>
+    <ROW File="System.Threading.dll" Component_="System.Threading.dll" FileName="SYSTE~85.DLL|System.Threading.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Threading.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Overlapped.dll" Component_="System.Threading.Overlapped.dll" FileName="SYSTE~86.DLL|System.Threading.Overlapped.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Threading.Overlapped.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Tasks.dll" Component_="System.Threading.Tasks.dll" FileName="SYSTE~87.DLL|System.Threading.Tasks.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Threading.Tasks.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Tasks.Parallel.dll" Component_="System.Threading.Tasks.Parallel.dll" FileName="SYSTE~88.DLL|System.Threading.Tasks.Parallel.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Threading.Tasks.Parallel.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Thread.dll" Component_="System.Threading.Thread.dll" FileName="SYSTE~89.DLL|System.Threading.Thread.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Threading.Thread.dll" SelfReg="false"/>
+    <ROW File="System.Threading.ThreadPool.dll" Component_="System.Threading.ThreadPool.dll" FileName="SYSTE~90.DLL|System.Threading.ThreadPool.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Threading.ThreadPool.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Timer.dll" Component_="System.Threading.Timer.dll" FileName="SYSTE~91.DLL|System.Threading.Timer.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Threading.Timer.dll" SelfReg="false"/>
+    <ROW File="System.ValueTuple.dll" Component_="System.ValueTuple.dll" FileName="SYSTE~92.DLL|System.ValueTuple.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.ValueTuple.dll" SelfReg="false"/>
+    <ROW File="System.Xml.ReaderWriter.dll" Component_="System.Xml.ReaderWriter.dll" FileName="SYSTE~93.DLL|System.Xml.ReaderWriter.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Xml.ReaderWriter.dll" SelfReg="false"/>
+    <ROW File="System.Xml.XDocument.dll" Component_="System.Xml.XDocument.dll" FileName="SYSTE~94.DLL|System.Xml.XDocument.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Xml.XDocument.dll" SelfReg="false"/>
+    <ROW File="System.Xml.XmlDocument.dll" Component_="System.Xml.XmlDocument.dll" FileName="SYSTE~95.DLL|System.Xml.XmlDocument.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Xml.XmlDocument.dll" SelfReg="false"/>
+    <ROW File="System.Xml.XmlSerializer.dll" Component_="System.Xml.XmlSerializer.dll" FileName="SYSTE~96.DLL|System.Xml.XmlSerializer.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Xml.XmlSerializer.dll" SelfReg="false"/>
+    <ROW File="System.Xml.XPath.dll" Component_="System.Xml.XPath.dll" FileName="SYSTE~97.DLL|System.Xml.XPath.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Xml.XPath.dll" SelfReg="false"/>
+    <ROW File="System.Xml.XPath.XDocument.dll" Component_="System.Xml.XPath.XDocument.dll" FileName="SYSTE~98.DLL|System.Xml.XPath.XDocument.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R19\System.Xml.XPath.XDocument.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.dll_1" Component_="ClosedXML.dll_1" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\ClosedXML.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.Parser.dll_1" Component_="ClosedXML.Parser.dll_1" FileName="CLOSED~2.DLL|ClosedXML.Parser.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\ClosedXML.Parser.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll_1" Component_="DocumentFormat.OpenXml.dll_1" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.dll_1" Component_="DocumentFormat.OpenXml.Framework.dll_1" FileName="DOCUME~2.DLL|DocumentFormat.OpenXml.Framework.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\DocumentFormat.OpenXml.Framework.dll" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll_1" Component_="ExcelNumberFormat.dll_1" FileName="EXCELN~1.DLL|ExcelNumberFormat.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\ExcelNumberFormat.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.HashCode.dll_1" Component_="Microsoft.Bcl.HashCode.dll_1" FileName="MICROS~2.DLL|Microsoft.Bcl.HashCode.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\Microsoft.Bcl.HashCode.dll" SelfReg="false"/>
+    <ROW File="RBush.dll_1" Component_="RBush.dll_1" FileName="RBush.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\RBush.dll" SelfReg="false"/>
+    <ROW File="SixLabors.Fonts.dll_1" Component_="SixLabors.Fonts.dll_1" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\SixLabors.Fonts.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll_1" Component_="System.Buffers.dll_1" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Data.Common.dll_1" Component_="System.Data.Common.dll_1" FileName="SYSTEM~2.DLL|System.Data.Common.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Data.Common.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.StackTrace.dll_1" Component_="System.Diagnostics.StackTrace.dll_1" FileName="SYSTEM~3.DLL|System.Diagnostics.StackTrace.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Diagnostics.StackTrace.dll" SelfReg="false"/>
+    <ROW File="System.Diagnostics.Tracing.dll_1" Component_="System.Diagnostics.Tracing.dll_1" FileName="SYSTEM~4.DLL|System.Diagnostics.Tracing.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Diagnostics.Tracing.dll" SelfReg="false"/>
+    <ROW File="System.Globalization.Extensions.dll_1" Component_="System.Globalization.Extensions.dll_1" FileName="SYSTEM~5.DLL|System.Globalization.Extensions.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Globalization.Extensions.dll" SelfReg="false"/>
+    <ROW File="System.IO.Compression.dll_1" Component_="System.IO.Compression.dll_1" FileName="SYSTEM~6.DLL|System.IO.Compression.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.IO.Compression.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll_1" Component_="System.Memory.dll_1" FileName="SYSTEM~7.DLL|System.Memory.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Net.Http.dll_1" Component_="System.Net.Http.dll_1" FileName="SYSTEM~8.DLL|System.Net.Http.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Net.Http.dll" SelfReg="false"/>
+    <ROW File="System.Net.Sockets.dll_1" Component_="System.Net.Sockets.dll_1" FileName="SYSTEM~9.DLL|System.Net.Sockets.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Net.Sockets.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll_1" Component_="System.Numerics.Vectors.dll_1" FileName="SYSTE~10.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Un_1_safe.dll" Component_="System.Runtime.CompilerServices.Un_1_safe.dll" FileName="SYSTE~11.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.Serialization.Primi_1_tives.dll" Component_="System.Runtime.Serialization.Primi_1_tives.dll" FileName="SYSTE~12.DLL|System.Runtime.Serialization.Primitives.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Runtime.Serialization.Primitives.dll" SelfReg="false"/>
+    <ROW File="System.Security.Cryptography.Algor_1_ithms.dll" Component_="System.Security.Cryptography.Algor_1_ithms.dll" FileName="SYSTE~13.DLL|System.Security.Cryptography.Algorithms.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Security.Cryptography.Algorithms.dll" SelfReg="false"/>
+    <ROW File="System.Security.SecureString.dll_1" Component_="System.Security.SecureString.dll_1" FileName="SYSTE~14.DLL|System.Security.SecureString.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Security.SecureString.dll" SelfReg="false"/>
+    <ROW File="System.Threading.Overlapped.dll_1" Component_="System.Threading.Overlapped.dll_1" FileName="SYSTE~15.DLL|System.Threading.Overlapped.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Threading.Overlapped.dll" SelfReg="false"/>
+    <ROW File="System.Xml.XPath.XDocument.dll_1" Component_="System.Xml.XPath.XDocument.dll_1" FileName="SYSTE~16.DLL|System.Xml.XPath.XDocument.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R20\System.Xml.XPath.XDocument.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.dll_2" Component_="ClosedXML.dll_2" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\ClosedXML.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.Parser.dll_2" Component_="ClosedXML.Parser.dll_2" FileName="CLOSED~2.DLL|ClosedXML.Parser.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\ClosedXML.Parser.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll_2" Component_="DocumentFormat.OpenXml.dll_2" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.dll_2" Component_="DocumentFormat.OpenXml.Framework.dll_2" FileName="DOCUME~2.DLL|DocumentFormat.OpenXml.Framework.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\DocumentFormat.OpenXml.Framework.dll" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll_2" Component_="ExcelNumberFormat.dll_2" FileName="EXCELN~1.DLL|ExcelNumberFormat.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\ExcelNumberFormat.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.HashCode.dll_2" Component_="Microsoft.Bcl.HashCode.dll_2" FileName="MICROS~2.DLL|Microsoft.Bcl.HashCode.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\Microsoft.Bcl.HashCode.dll" SelfReg="false"/>
+    <ROW File="RBush.dll_2" Component_="RBush.dll_2" FileName="RBush.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\RBush.dll" SelfReg="false"/>
+    <ROW File="SixLabors.Fonts.dll_2" Component_="SixLabors.Fonts.dll_2" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\SixLabors.Fonts.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll_2" Component_="System.Buffers.dll_2" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll_2" Component_="System.Memory.dll_2" FileName="SYSTEM~2.DLL|System.Memory.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll_2" Component_="System.Numerics.Vectors.dll_2" FileName="SYSTEM~3.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Un_2_safe.dll" Component_="System.Runtime.CompilerServices.Un_2_safe.dll" FileName="SYSTEM~4.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R21\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.dll_3" Component_="ClosedXML.dll_3" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\ClosedXML.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.Parser.dll_3" Component_="ClosedXML.Parser.dll_3" FileName="CLOSED~2.DLL|ClosedXML.Parser.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\ClosedXML.Parser.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll_3" Component_="DocumentFormat.OpenXml.dll_3" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.dll_3" Component_="DocumentFormat.OpenXml.Framework.dll_3" FileName="DOCUME~2.DLL|DocumentFormat.OpenXml.Framework.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\DocumentFormat.OpenXml.Framework.dll" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll_3" Component_="ExcelNumberFormat.dll_3" FileName="EXCELN~1.DLL|ExcelNumberFormat.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\ExcelNumberFormat.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.HashCode.dll_3" Component_="Microsoft.Bcl.HashCode.dll_3" FileName="MICROS~2.DLL|Microsoft.Bcl.HashCode.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\Microsoft.Bcl.HashCode.dll" SelfReg="false"/>
+    <ROW File="RBush.dll_3" Component_="RBush.dll_3" FileName="RBush.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\RBush.dll" SelfReg="false"/>
+    <ROW File="SixLabors.Fonts.dll_3" Component_="SixLabors.Fonts.dll_3" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\SixLabors.Fonts.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll_3" Component_="System.Buffers.dll_3" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll_3" Component_="System.Memory.dll_3" FileName="SYSTEM~2.DLL|System.Memory.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll_3" Component_="System.Numerics.Vectors.dll_3" FileName="SYSTEM~3.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Un_3_safe.dll" Component_="System.Runtime.CompilerServices.Un_3_safe.dll" FileName="SYSTEM~4.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R22\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.dll_4" Component_="ClosedXML.dll_4" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\ClosedXML.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.Parser.dll_4" Component_="ClosedXML.Parser.dll_4" FileName="CLOSED~2.DLL|ClosedXML.Parser.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\ClosedXML.Parser.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll_4" Component_="DocumentFormat.OpenXml.dll_4" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.dll_4" Component_="DocumentFormat.OpenXml.Framework.dll_4" FileName="DOCUME~2.DLL|DocumentFormat.OpenXml.Framework.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\DocumentFormat.OpenXml.Framework.dll" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll_4" Component_="ExcelNumberFormat.dll_4" FileName="EXCELN~1.DLL|ExcelNumberFormat.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\ExcelNumberFormat.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.HashCode.dll_4" Component_="Microsoft.Bcl.HashCode.dll_4" FileName="MICROS~2.DLL|Microsoft.Bcl.HashCode.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\Microsoft.Bcl.HashCode.dll" SelfReg="false"/>
+    <ROW File="RBush.dll_4" Component_="RBush.dll_4" FileName="RBush.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\RBush.dll" SelfReg="false"/>
+    <ROW File="SixLabors.Fonts.dll_4" Component_="SixLabors.Fonts.dll_4" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\SixLabors.Fonts.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll_4" Component_="System.Buffers.dll_4" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll_4" Component_="System.Memory.dll_4" FileName="SYSTEM~2.DLL|System.Memory.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll_4" Component_="System.Numerics.Vectors.dll_4" FileName="SYSTEM~3.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Un_4_safe.dll" Component_="System.Runtime.CompilerServices.Un_4_safe.dll" FileName="SYSTEM~4.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R23\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.dll_5" Component_="ClosedXML.dll_5" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\ClosedXML.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.Parser.dll_5" Component_="ClosedXML.Parser.dll_5" FileName="CLOSED~2.DLL|ClosedXML.Parser.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\ClosedXML.Parser.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll_5" Component_="DocumentFormat.OpenXml.dll_5" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.dll_5" Component_="DocumentFormat.OpenXml.Framework.dll_5" FileName="DOCUME~2.DLL|DocumentFormat.OpenXml.Framework.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\DocumentFormat.OpenXml.Framework.dll" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll_5" Component_="ExcelNumberFormat.dll_5" FileName="EXCELN~1.DLL|ExcelNumberFormat.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\ExcelNumberFormat.dll" SelfReg="false"/>
+    <ROW File="Microsoft.Bcl.HashCode.dll_5" Component_="Microsoft.Bcl.HashCode.dll_5" FileName="MICROS~2.DLL|Microsoft.Bcl.HashCode.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\Microsoft.Bcl.HashCode.dll" SelfReg="false"/>
+    <ROW File="RBush.dll_5" Component_="RBush.dll_5" FileName="RBush.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\RBush.dll" SelfReg="false"/>
+    <ROW File="SixLabors.Fonts.dll_5" Component_="SixLabors.Fonts.dll_5" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\SixLabors.Fonts.dll" SelfReg="false"/>
+    <ROW File="System.Buffers.dll_5" Component_="System.Buffers.dll_5" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\System.Buffers.dll" SelfReg="false"/>
+    <ROW File="System.Memory.dll_5" Component_="System.Memory.dll_5" FileName="SYSTEM~2.DLL|System.Memory.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\System.Memory.dll" SelfReg="false"/>
+    <ROW File="System.Numerics.Vectors.dll_5" Component_="System.Numerics.Vectors.dll_5" FileName="SYSTEM~3.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\System.Numerics.Vectors.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.CompilerServices.Un_5_safe.dll" Component_="System.Runtime.CompilerServices.Un_5_safe.dll" FileName="SYSTEM~4.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R24\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.dll_6" Component_="ClosedXML.dll_6" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\ClosedXML.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.Parser.dll_6" Component_="ClosedXML.Parser.dll_6" FileName="CLOSED~2.DLL|ClosedXML.Parser.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\ClosedXML.Parser.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll_6" Component_="DocumentFormat.OpenXml.dll_6" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.dll_6" Component_="DocumentFormat.OpenXml.Framework.dll_6" FileName="DOCUME~2.DLL|DocumentFormat.OpenXml.Framework.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\DocumentFormat.OpenXml.Framework.dll" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll_6" Component_="ExcelNumberFormat.dll_6" FileName="EXCELN~1.DLL|ExcelNumberFormat.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\ExcelNumberFormat.dll" SelfReg="false"/>
+    <ROW File="RBush.dll_6" Component_="RBush.dll_6" FileName="RBush.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\RBush.dll" SelfReg="false"/>
+    <ROW File="SixLabors.Fonts.dll_6" Component_="SixLabors.Fonts.dll_6" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\SixLabors.Fonts.dll" SelfReg="false"/>
+    <ROW File="System.IO.Packaging.dll" Component_="System.IO.Packaging.dll" FileName="SYSTEM~1.DLL|System.IO.Packaging.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R25\System.IO.Packaging.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.dll_7" Component_="ClosedXML.dll_7" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\ClosedXML.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.Parser.dll_7" Component_="ClosedXML.Parser.dll_7" FileName="CLOSED~2.DLL|ClosedXML.Parser.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\ClosedXML.Parser.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll_7" Component_="DocumentFormat.OpenXml.dll_7" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.dll_7" Component_="DocumentFormat.OpenXml.Framework.dll_7" FileName="DOCUME~2.DLL|DocumentFormat.OpenXml.Framework.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\DocumentFormat.OpenXml.Framework.dll" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll_7" Component_="ExcelNumberFormat.dll_7" FileName="EXCELN~1.DLL|ExcelNumberFormat.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\ExcelNumberFormat.dll" SelfReg="false"/>
+    <ROW File="RBush.dll_7" Component_="RBush.dll_7" FileName="RBush.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\RBush.dll" SelfReg="false"/>
+    <ROW File="SixLabors.Fonts.dll_7" Component_="SixLabors.Fonts.dll_7" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\SixLabors.Fonts.dll" SelfReg="false"/>
+    <ROW File="System.IO.Packaging.dll_1" Component_="System.IO.Packaging.dll_1" FileName="SYSTEM~3.DLL|System.IO.Packaging.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\System.IO.Packaging.dll" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -250,57 +575,220 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
     <ROW Feature_="MainFeature" Component_="ProductInformation"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.Interfaces.dll"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.System.Drawing.dll"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.dll"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_1"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_2"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_3"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_4"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.System.Drawing.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.System.Drawing.dll_2"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.System.Drawing.dll_3"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_1"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.Interfaces.dll_1"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_2"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_2"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_2"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.Interfaces.dll_2"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_3"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_3"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_3"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.Interfaces.dll_3"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.System.Drawing.dll_4"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_4"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream.dll_4"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_4"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.Interfaces.dll_4"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_5"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_5"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.Interfaces.dll_5"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.System.Drawing.dll_5"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.deps.json"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_5"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.Abstractions.dll"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.dll"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.FileExtensions.dll"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Configuration.Json.dll"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.FileProviders.Abstractions.dll"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.FileProviders.Physical.dll"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.FileSystemGlobbing.dll"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.Extensions.Primitives.dll"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream._1_dll"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_6"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.dll_6"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.Interfaces.dll_6"/>
-    <ROW Feature_="MainFeature" Component_="EPPlus.System.Drawing.dll_6"/>
     <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_6"/>
-    <ROW Feature_="MainFeature" Component_="Microsoft.IO.RecyclableMemoryStream._2_dll"/>
+    <ROW Feature_="MainFeature" Component_="ExportSchedule.deps.json_1"/>
+    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_7"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.dll"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.Parser.dll"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.Framework.dll"/>
+    <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.HashCode.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Win32.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="netstandard.dll"/>
+    <ROW Feature_="MainFeature" Component_="RBush.dll"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.AppContext.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Collections.Concurrent.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Collections.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Collections.NonGeneric.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Collections.Specialized.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ComponentModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ComponentModel.EventBasedAsync.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ComponentModel.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ComponentModel.TypeConverter.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Console.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Data.Common.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.Contracts.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.Debug.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.FileVersionInfo.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.Process.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.StackTrace.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.TextWriterTraceListener.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.Tools.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.TraceSource.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.Tracing.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Drawing.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Dynamic.Runtime.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Globalization.Calendars.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Globalization.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Globalization.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.Compression.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.Compression.ZipFile.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.FileSystem.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.FileSystem.DriveInfo.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.FileSystem.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.FileSystem.Watcher.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.IsolatedStorage.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.MemoryMappedFiles.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.Pipes.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.UnmanagedMemoryStream.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Linq.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Linq.Expressions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Linq.Parallel.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Linq.Queryable.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.Http.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.NameResolution.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.NetworkInformation.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.Ping.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.Requests.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.Security.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.Sockets.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.WebHeaderCollection.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.WebSockets.Client.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.WebSockets.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ObjectModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Reflection.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Reflection.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Reflection.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Resources.Reader.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Resources.ResourceManager.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Resources.Writer.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.VisualC.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.Handles.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.InteropServices.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.InteropServices.RuntimeInformation.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.Numerics.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.Serialization.Formatters.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.Serialization.Json.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.Serialization.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.Serialization.Xml.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.Claims.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.Cryptography.Algorithms.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.Cryptography.Csp.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.Cryptography.Encoding.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.Cryptography.Primitives.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.Cryptography.X509Certificates.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.Principal.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.SecureString.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Text.Encoding.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Text.Encoding.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Text.RegularExpressions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.Overlapped.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.Tasks.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.Tasks.Parallel.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.Thread.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.ThreadPool.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.Timer.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ValueTuple.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.ReaderWriter.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.XDocument.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.XmlDocument.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.XmlSerializer.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.XPath.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.XPath.XDocument.dll"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.Parser.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.Framework.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.HashCode.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="RBush.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Data.Common.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.StackTrace.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Diagnostics.Tracing.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Globalization.Extensions.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.Compression.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.Http.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.Sockets.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Un_1_safe.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.Serialization.Primi_1_tives.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.Cryptography.Algor_1_ithms.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Security.SecureString.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Threading.Overlapped.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.XPath.XDocument.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.Parser.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.Framework.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.HashCode.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="RBush.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Un_2_safe.dll"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.Parser.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.Framework.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.HashCode.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="RBush.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Un_3_safe.dll"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.Parser.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.Framework.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.HashCode.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="RBush.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll_4"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Un_4_safe.dll"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.Parser.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.Framework.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.Bcl.HashCode.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="RBush.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="System.Buffers.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="System.Memory.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="System.Numerics.Vectors.dll_5"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.CompilerServices.Un_5_safe.dll"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.Parser.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.Framework.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="RBush.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll_6"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.Packaging.dll"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.Parser.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.Framework.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="RBush.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll_7"/>
+    <ROW Feature_="MainFeature" Component_="System.IO.Packaging.dll_1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="ExportSchedule.exe" SourcePath="..\ExportSchedule\ExportSchedule.ico" Index="0"/>

@@ -10,8 +10,8 @@ namespace ExportSchedule;
 [Regeneration(RegenerationOption.Manual)]
 public class CommandExportSchedule : IExternalCommand
 {
-    private UIApplication _uiapp;
-    private UIDocument _uidoc;
+    private UIApplication _uiApp;
+    private UIDocument _uiDoc;
     private Autodesk.Revit.ApplicationServices.Application _app;
     private Document _doc;
 
@@ -21,10 +21,10 @@ public class CommandExportSchedule : IExternalCommand
 
     public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
     {
-        _uiapp = commandData.Application;
-        _uidoc = _uiapp.ActiveUIDocument;
-        _app = _uiapp.Application;
-        _doc = _uidoc.Document;
+        _uiApp = commandData.Application;
+        _uiDoc = _uiApp.ActiveUIDocument;
+        _app = _uiApp.Application;
+        _doc = _uiDoc.Document;
 
         ViewSchedule activeView = commandData.Application.ActiveUIDocument.ActiveView as ViewSchedule;
         if (activeView is null)
@@ -80,7 +80,11 @@ public class CommandExportSchedule : IExternalCommand
             {
                 try
                 {
-                    Process.Start(saveFileDialog.FileName);
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = saveFileDialog.FileName,
+                        UseShellExecute = true
+                    });
                 }
                 catch
                 {
@@ -89,6 +93,7 @@ public class CommandExportSchedule : IExternalCommand
             else if (taskDialogResult == TaskDialogResult.CommandLink2)
             {
                 Process.Start("explorer.exe", "/root," + directoryName);
+
             }
             else if (taskDialogResult == Autodesk.Revit.UI.TaskDialogResult.Cancel)
             {

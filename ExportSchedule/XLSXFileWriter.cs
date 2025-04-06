@@ -1,7 +1,5 @@
 ﻿using Autodesk.Revit.DB;
-using OfficeOpenXml;
-using System;
-using System.Collections.Generic;
+using ClosedXML.Excel;
 using System.Diagnostics;
 using System.IO;
 
@@ -14,8 +12,6 @@ public class XLSXFileWriter
     private string _filenameWithoutExtension;
     private ViewSchedule _viewSchedule;
     private int _currentRow = 1;
-
-    private ExcelWorksheet _worksheet;
 
     private List<Tuple<int, int>> _writtenCells = new List<Tuple<int, int>>();
 
@@ -31,34 +27,31 @@ public class XLSXFileWriter
 
     public void Export()
     {
-        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-
         var oXLFile = new FileInfo(_fileName);
-        if(oXLFile.Exists == true)
+        if (oXLFile.Exists == true)
         {
             oXLFile.Delete();
         }
 
-        using(var xlPackage = new ExcelPackage(oXLFile))
+        using (var workbook = new XLWorkbook())
         {
             //add a worksheet
-            _worksheet = xlPackage.Workbook.Worksheets.Add(_filenameWithoutExtension);
+            var worksheet = workbook.AddWorksheet(_filenameWithoutExtension);
 
             //write data to the worksheet
-            //WriteSection(SectionType.Header, _worksheet);
-            WriteSection(SectionType.Body, _worksheet);
+            WriteSection(SectionType.Body, worksheet);
 
             //set the file properties
-            xlPackage.Workbook.Properties.Title = _filenameWithoutExtension;
-            xlPackage.Workbook.Properties.Author = System.Environment.UserName;
-            xlPackage.Workbook.Properties.Subject = "Revit Schedule Export";
+            workbook.Properties.Title = _filenameWithoutExtension;
+            workbook.Properties.Author = System.Environment.UserName;
+            workbook.Properties.Subject = "Revit Schedule Export";
 
             // save the new spreadsheet
-            xlPackage.Save();
+            workbook.SaveAs(_fileName);
         }
     }
 
-    private void WriteSection(SectionType sectionType, ExcelWorksheet worksheet)
+    private void WriteSection(SectionType sectionType, IXLWorksheet worksheet)
     {
         _writtenCells.Clear();
         TableSectionData sectionData = _viewSchedule.GetTableData().GetSectionData(sectionType);
@@ -69,14 +62,13 @@ public class XLSXFileWriter
           
             do
             {
-                WriteSectionRow(sectionType, _viewSchedule, sectionData, firstRowNumber, numberOfColumns, _worksheet);
+                WriteSectionRow(sectionType, _viewSchedule, sectionData, firstRowNumber, numberOfColumns, worksheet);
                 firstRowNumber += 1;
             }
             while (firstRowNumber < numberOfRows);
-
     }
 
-    private void WriteSectionRow(SectionType sectionType, ViewSchedule schedule, TableSectionData sectionData, int iRow, int numberOfColumns, ExcelWorksheet worksheet)
+    private void WriteSectionRow(SectionType sectionType, ViewSchedule schedule, TableSectionData sectionData, int iRow, int numberOfColumns, IXLWorksheet worksheet)
     {
         var currentColumn = sectionData.FirstColumnNumber;
         decimal textSize = 10m;
@@ -106,7 +98,7 @@ public class XLSXFileWriter
                     if (mergedCell.Right > 0)
                     {
                         //worksheet.Cells(_currentRow, currentColumn + 1, toRow, toCol).Merge = true;
-                        worksheet.Cells[_currentRow, currentColumn + 1, toRow, toCol].Merge = true;
+                        worksheet.Range(_currentRow, currentColumn + 1, toRow, toCol).Merge();
                     }
                         
                 }
@@ -115,12 +107,9 @@ public class XLSXFileWriter
                     if (mergedCell.Left != mergedCell.Right || mergedCell.Top != mergedCell.Bottom)
                     {
                         // so we have some cells to merge
-                        // oWorkSheet.Cells.CreateRange(m_CurrentRow, firstColumnNumber + 1, mergedCell.Bottom - mergedCell.Top, mergedCell.Right - mergedCell.Left).MergeCells()
-                        // Dim oCell As ExcelCell = oWorkSheet.Cell(m_CurrentRow, m_CurrentColumn + 1)
-                        // oWorkSheet.MergeCells(oCell, mergedCell.Bottom - mergedCell.Top, mergedCell.Right - mergedCell.Left)
                         toRow = fromRow + (mergedCell.Bottom - mergedCell.Top);
                         toCol = fromCol + (mergedCell.Right - mergedCell.Left);
-                        worksheet.Cells[fromRow, fromCol, toRow, toCol].Merge = true;
+                        worksheet.Range(fromRow, fromCol, toRow, toCol).Merge();
                     }
                     else
                     {
@@ -154,58 +143,60 @@ public class XLSXFileWriter
                 }
 
                 Debug.WriteLine(fromRow + ", " + fromCol + ", " + toRow + ", " + toCol + " - " + cellText);
-                OfficeOpenXml.Style.ExcelHorizontalAlignment horAlignment;
+
+
+                XLAlignmentHorizontalValues horAlignment;
                 switch (tableCellStyle.FontHorizontalAlignment)
                 {
                     case HorizontalAlignmentStyle.Left:
                     {
-                        horAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Left;
+                        horAlignment = XLAlignmentHorizontalValues.Left;
                         break;
                     }
 
                     case HorizontalAlignmentStyle.Right:
                     {
-                        horAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Right;
+                        horAlignment = XLAlignmentHorizontalValues.Right;
                         break;
                     }
 
                     case HorizontalAlignmentStyle.Center:
                     {
-                        horAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                        horAlignment = XLAlignmentHorizontalValues.Center;
                         break;
                     }
 
                     default:
                     {
-                        horAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.General;
+                        horAlignment = XLAlignmentHorizontalValues.General;
                         break;
                     }
                 }
 
-                OfficeOpenXml.Style.ExcelVerticalAlignment vertAlignment;
+                XLAlignmentVerticalValues vertAlignment;
                 switch (tableCellStyle.FontVerticalAlignment)
                 {
                     case VerticalAlignmentStyle.Top:
                     {
-                        vertAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Top;
+                        vertAlignment = XLAlignmentVerticalValues.Top;
                         break;
                     }
 
                     case VerticalAlignmentStyle.Middle:
                     {
-                        vertAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
+                        vertAlignment = XLAlignmentVerticalValues.Center;
                         break;
                     }
 
                     case VerticalAlignmentStyle.Bottom:
                     {
-                        vertAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Bottom;
+                        vertAlignment = XLAlignmentVerticalValues.Bottom;
                         break;
                     }
 
                     default:
                     {
-                        vertAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Top;
+                        vertAlignment = XLAlignmentVerticalValues.Top;
                         break;
                     }
                 }
@@ -220,7 +211,7 @@ public class XLSXFileWriter
                 }
 
                 {
-                    var range = worksheet.Cells[_currentRow, currentColumn + 1];
+                    var range = worksheet.Cell(_currentRow, currentColumn + 1);
 
                     if (!cellText.StartsWith("0") && double.TryParse(cellText, out var numberValue))
                     {
@@ -233,26 +224,31 @@ public class XLSXFileWriter
                         range.Value = cellText;
                     }
 
-                    range.Style.WrapText = true;
-                    range.Style.Font.Size = (float)textSize;
-                    range.Style.Font.Name = tableCellStyle.FontName;
-                    range.Style.Font.Color.SetColor(System.Drawing.Color.FromArgb(tableCellStyle.TextColor.Red, tableCellStyle.TextColor.Green, tableCellStyle.TextColor.Blue));
+                    range.Style.Alignment.WrapText = true;
+                    range.Style.Font.FontSize = (float)textSize;
+                    range.Style.Font.FontName = tableCellStyle.FontName;
+                    range.Style.Font.SetFontColor(XLColor.FromArgb(tableCellStyle.TextColor.Red, tableCellStyle.TextColor.Green, tableCellStyle.TextColor.Blue));
                     range.Style.Font.Bold = tableCellStyle.IsFontBold;
                     range.Style.Font.Italic = tableCellStyle.IsFontItalic;
-                    range.Style.Font.UnderLine = tableCellStyle.IsFontUnderline;
-                    range.Style.HorizontalAlignment = horAlignment;
 
-                    range.Style.VerticalAlignment = vertAlignment;
+                    if (tableCellStyle.IsFontUnderline)
+                    {
+                        range.Style.Font.Underline = XLFontUnderlineValues.Single;
+                    }
+  
+                    range.Style.Alignment.Horizontal = horAlignment;
+
+                    range.Style.Alignment.Vertical = vertAlignment;
                     if (!ColorsEqual(tableCellStyle.BackgroundColor, _white))
                     {
-                        range.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
-                        range.Style.Fill.BackgroundColor.SetColor(System.Drawing.Color.FromArgb(tableCellStyle.BackgroundColor.Red, tableCellStyle.BackgroundColor.Green, tableCellStyle.BackgroundColor.Blue));
+                        range.Style.Fill.PatternType = XLFillPatternValues.Solid;
+                        range.Style.Fill.SetBackgroundColor(XLColor.FromArgb(tableCellStyle.BackgroundColor.Red, tableCellStyle.BackgroundColor.Green, tableCellStyle.BackgroundColor.Blue));
                     }
 
-                    range.Style.Border.Top.Style = GetLineStyle(tableCellStyle.BorderTopLineStyle);
-                    range.Style.Border.Bottom.Style = GetLineStyle(tableCellStyle.BorderBottomLineStyle);
-                    range.Style.Border.Left.Style = GetLineStyle(tableCellStyle.BorderLeftLineStyle);
-                    range.Style.Border.Right.Style = GetLineStyle(tableCellStyle.BorderRightLineStyle);
+                    //range.Style.Border.TopBorder = GetLineStyle(tableCellStyle.BorderTopLineStyle);
+                    //range.Style.Border.BottomBorder = GetLineStyle(tableCellStyle.BorderBottomLineStyle);
+                    //range.Style.Border.LeftBorder = GetLineStyle(tableCellStyle.BorderLeftLineStyle);
+                    //range.Style.Border.RightBorder = GetLineStyle(tableCellStyle.BorderRightLineStyle);
                 }
 
                 worksheet.Column(currentColumn + 1).Width = sectionData.GetColumnWidth(currentColumn) * 1150 / 7.5d;
@@ -263,6 +259,7 @@ public class XLSXFileWriter
         while (currentColumn < numberOfColumns);
         _currentRow += 1;
     }
+
 
     /// <summary>
     /// Compares two colors.
@@ -275,8 +272,9 @@ public class XLSXFileWriter
         return color1.Red == color2.Red && color1.Green == color2.Green && color1.Blue == color2.Blue;
     }
 
-    private static OfficeOpenXml.Style.ExcelBorderStyle GetLineStyle(ElementId border)
+    private static XLBorderStyleValues GetLineStyle(ElementId border)
     {
+        
         //TODO get the line weight and line pattern from the border 
         //Autodesk:Revit:DB:GraphicsStyle
 
@@ -288,6 +286,6 @@ public class XLSXFileWriter
         //OfficeOpenXml.Style.ExcelBorderStyle.DashDotDot;
         //OfficeOpenXml.Style.ExcelBorderStyle.Double;
 
-        return OfficeOpenXml.Style.ExcelBorderStyle.None;
+        return XLBorderStyleValues.None;
     }
 }

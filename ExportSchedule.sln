@@ -29,6 +29,8 @@ Global
 		Debug 2024|x64 = Debug 2024|x64
 		Debug 2025|Any CPU = Debug 2025|Any CPU
 		Debug 2025|x64 = Debug 2025|x64
+		Debug 2026|Any CPU = Debug 2026|Any CPU
+		Debug 2026|x64 = Debug 2026|x64
 		Release 2019|Any CPU = Release 2019|Any CPU
 		Release 2019|x64 = Release 2019|x64
 		Release 2020|Any CPU = Release 2020|Any CPU
@@ -43,6 +45,8 @@ Global
 		Release 2024|x64 = Release 2024|x64
 		Release 2025|Any CPU = Release 2025|Any CPU
 		Release 2025|x64 = Release 2025|x64
+		Release 2026|Any CPU = Release 2026|Any CPU
+		Release 2026|x64 = Release 2026|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Debug 2019|Any CPU.ActiveCfg = Debug|Any CPU
@@ -60,6 +64,8 @@ Global
 		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Debug 2024|x64.ActiveCfg = Debug|Any CPU
 		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Debug 2025|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Debug 2025|x64.ActiveCfg = Debug|Any CPU
+		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Debug 2026|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Debug 2026|x64.ActiveCfg = Debug|Any CPU
 		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Release 2019|Any CPU.ActiveCfg = Release|Any CPU
 		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Release 2019|x64.ActiveCfg = Release|Any CPU
 		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Release 2020|Any CPU.ActiveCfg = Release|Any CPU
@@ -74,6 +80,8 @@ Global
 		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Release 2024|x64.ActiveCfg = Release|Any CPU
 		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Release 2025|Any CPU.ActiveCfg = Release|Any CPU
 		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Release 2025|x64.ActiveCfg = Release|Any CPU
+		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Release 2026|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C00BBC-E0CA-4D21-AF7A-C6CE688E0071}.Release 2026|x64.ActiveCfg = Release|Any CPU
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Debug 2019|Any CPU.ActiveCfg = Debug R19|Any CPU
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Debug 2019|Any CPU.Build.0 = Debug R19|Any CPU
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Debug 2019|x64.ActiveCfg = Debug R19|Any CPU
@@ -102,6 +110,10 @@ Global
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Debug 2025|Any CPU.Build.0 = Debug R25|Any CPU
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Debug 2025|x64.ActiveCfg = Debug R25|Any CPU
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Debug 2025|x64.Build.0 = Debug R25|Any CPU
+		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Debug 2026|Any CPU.ActiveCfg = Debug R26|Any CPU
+		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Debug 2026|Any CPU.Build.0 = Debug R26|Any CPU
+		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Debug 2026|x64.ActiveCfg = Debug R25|Any CPU
+		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Debug 2026|x64.Build.0 = Debug R25|Any CPU
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Release 2019|Any CPU.ActiveCfg = Release R19|Any CPU
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Release 2019|Any CPU.Build.0 = Release R19|Any CPU
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Release 2019|x64.ActiveCfg = Release R19|Any CPU
@@ -130,6 +142,10 @@ Global
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Release 2025|Any CPU.Build.0 = Release R25|Any CPU
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Release 2025|x64.ActiveCfg = Release R25|Any CPU
 		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Release 2025|x64.Build.0 = Release R25|Any CPU
+		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Release 2026|Any CPU.ActiveCfg = Release R26|Any CPU
+		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Release 2026|Any CPU.Build.0 = Release R26|Any CPU
+		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Release 2026|x64.ActiveCfg = Release R25|Any CPU
+		{68F2D96D-4A86-45B9-81A1-A8EAE5CD79A3}.Release 2026|x64.Build.0 = Release R25|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -27,7 +27,7 @@ public class CommandExportSchedule : IExternalCommand
         _doc = _uiDoc.Document;
 
         ViewSchedule activeView = commandData.Application.ActiveUIDocument.ActiveView as ViewSchedule;
-        if (activeView is null)
+        if (activeView is not ViewSchedule)
         {
             TaskDialog.Show("Error", "Open and activate a schedule view to export and run the command again");
             return Autodesk.Revit.UI.Result.Failed;
@@ -38,8 +38,8 @@ public class CommandExportSchedule : IExternalCommand
             Filter = "Microsoft Excel|*.xlsx",
             Title = "Export schedule to file",
             FileName = activeView.Name,
-            InitialDirectory = Path.GetDirectoryName(_doc.PathName)
         };
+
         if (saveFileDialog.ShowDialog() == false || string.IsNullOrEmpty(saveFileDialog.FileName))
         {
             return Autodesk.Revit.UI.Result.Cancelled;

@@ -5,7 +5,7 @@
 	<Configurations>$(Configurations);Release R19;Release R20;Release R21;Release R22;Release R23;Release R24;Release R25;Release R26</Configurations>
     <Description>Export Revit Schedule to Excel</Description>
     <Copyright>Copyright © Russell Green</Copyright>
-    <Version>3.0</Version>
+    <Version>3.1</Version>
 	  <PlatformTarget>x64</PlatformTarget>
 	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
 	  <LangVersion>latest</LangVersion>

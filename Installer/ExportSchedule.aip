@@ -6,10 +6,10 @@
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPPRODUCTICON" Value="ExportSchedule.exe" Type="8"/>
     <ROW Property="Manufacturer" Value="Russell Green"/>
-    <ROW Property="ProductCode" Value="2057:{D5BCCE26-862D-40DE-AC46-C6AD4C41F78A} " Type="16"/>
+    <ROW Property="ProductCode" Value="2057:{9BD91857-FE66-4B1B-8A9D-4778CB0D7834} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Export Schedule"/>
-    <ROW Property="ProductVersion" Value="3.0" Options="32"/>
+    <ROW Property="ProductVersion" Value="3.1" Options="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{1F2B5E7D-7896-4D2D-86E6-8779EF3F7652}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="20.3.2" version="22.2" Modules="simple" RootPath="." Language="en_GB" Id="{EA0754B8-8E7B-45CE-A7E8-11C02D7FCD10}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="20.3.2" version="23.4" Modules="simple" RootPath="." Language="en_GB" Id="{EA0754B8-8E7B-45CE-A7E8-11C02D7FCD10}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="ALLUSERS" Value="1"/>
@@ -35,6 +35,7 @@
     <ROW Directory="ExportSchedule_5_Dir" Directory_Parent="__5_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
     <ROW Directory="ExportSchedule_6_Dir" Directory_Parent="__6_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
     <ROW Directory="ExportSchedule_7_Dir" Directory_Parent="__7_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
+    <ROW Directory="ExportSchedule_8_Dir" Directory_Parent="__8_Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
     <ROW Directory="ExportSchedule_Dir" Directory_Parent="__Dir" DefaultDir="EXPORT~1|ExportSchedule"/>
     <ROW Directory="Revit_Dir" Directory_Parent="Autodesk_Dir" DefaultDir="Revit"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
@@ -45,6 +46,7 @@
     <ROW Directory="__5_Dir" Directory_Parent="Addins_Dir" DefaultDir="2025"/>
     <ROW Directory="__6_Dir" Directory_Parent="Addins_Dir" DefaultDir="2019"/>
     <ROW Directory="__7_Dir" Directory_Parent="Addins_Dir" DefaultDir="2026"/>
+    <ROW Directory="__8_Dir" Directory_Parent="Addins_Dir" DefaultDir="2027"/>
     <ROW Directory="__Dir" Directory_Parent="Addins_Dir" DefaultDir="2020"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
@@ -57,6 +59,7 @@
     <ROW Component="ClosedXML.Parser.dll_5" ComponentId="{94F45995-2E85-4D04-8C3C-8EF0FF5C39F1}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_5"/>
     <ROW Component="ClosedXML.Parser.dll_6" ComponentId="{C7B43436-A500-4834-82DD-8538E9E6B082}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_6"/>
     <ROW Component="ClosedXML.Parser.dll_7" ComponentId="{2F6D8CB8-1CA0-423D-9F1E-BBFD0E30DE96}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_7"/>
+    <ROW Component="ClosedXML.Parser.dll_8" ComponentId="{53876B4F-2B24-4AA5-86FA-D75B922A1D8C}" Directory_="ExportSchedule_8_Dir" Attributes="0" KeyPath="ClosedXML.Parser.dll_8"/>
     <ROW Component="ClosedXML.dll" ComponentId="{1A08E974-14FB-478C-A7BC-83D3C6650D01}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="ClosedXML.dll"/>
     <ROW Component="ClosedXML.dll_1" ComponentId="{7E61566A-5F9A-4688-8E1F-F6A4A0F10F5F}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="ClosedXML.dll_1"/>
     <ROW Component="ClosedXML.dll_2" ComponentId="{ED2E4BCC-D5E4-4371-8DE7-BF5D2EDABC55}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="ClosedXML.dll_2"/>
@@ -65,6 +68,7 @@
     <ROW Component="ClosedXML.dll_5" ComponentId="{C3D6845F-3CB0-4F0B-B781-52CFBC8A0FAD}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="ClosedXML.dll_5"/>
     <ROW Component="ClosedXML.dll_6" ComponentId="{2C187E55-FA6F-497F-A9D9-EAFAEE136AFF}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="ClosedXML.dll_6"/>
     <ROW Component="ClosedXML.dll_7" ComponentId="{1032F108-0FD0-4126-9462-FACD0CEA6327}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="ClosedXML.dll_7"/>
+    <ROW Component="ClosedXML.dll_8" ComponentId="{C8780E2E-E5D8-403E-A89F-22FD6D1C1F7C}" Directory_="ExportSchedule_8_Dir" Attributes="0" KeyPath="ClosedXML.dll_8"/>
     <ROW Component="DocumentFormat.OpenXml.Framework.dll" ComponentId="{FC8A8B0A-6F12-4D5E-9396-349EBE8AC1BC}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll"/>
     <ROW Component="DocumentFormat.OpenXml.Framework.dll_1" ComponentId="{3AA2D21E-9B31-4502-943F-17169F57254B}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_1"/>
     <ROW Component="DocumentFormat.OpenXml.Framework.dll_2" ComponentId="{42894954-96BA-4341-8342-61015B379684}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_2"/>
@@ -73,6 +77,7 @@
     <ROW Component="DocumentFormat.OpenXml.Framework.dll_5" ComponentId="{CDB47DCC-8758-40B6-9DBF-DCD66AA9D94B}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_5"/>
     <ROW Component="DocumentFormat.OpenXml.Framework.dll_6" ComponentId="{DFFDE743-A4BD-4369-8559-8D84CC360FE6}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_6"/>
     <ROW Component="DocumentFormat.OpenXml.Framework.dll_7" ComponentId="{34C1E4D7-9F58-4418-A582-FD05D8C9E049}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_7"/>
+    <ROW Component="DocumentFormat.OpenXml.Framework.dll_8" ComponentId="{A1002107-98C2-4A89-8906-D27412BED4A6}" Directory_="ExportSchedule_8_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.Framework.dll_8"/>
     <ROW Component="DocumentFormat.OpenXml.dll" ComponentId="{A8A2E856-5852-4E8A-A435-DFD390774FBE}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll"/>
     <ROW Component="DocumentFormat.OpenXml.dll_1" ComponentId="{18A5815E-9555-4D26-8AF6-4478E774C0B7}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_1"/>
     <ROW Component="DocumentFormat.OpenXml.dll_2" ComponentId="{7D66C822-717F-4F08-8952-6EB520A1F083}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_2"/>
@@ -81,6 +86,7 @@
     <ROW Component="DocumentFormat.OpenXml.dll_5" ComponentId="{FF204043-7A80-40C6-B077-63D08DA0B037}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_5"/>
     <ROW Component="DocumentFormat.OpenXml.dll_6" ComponentId="{FF59E818-6F3C-455E-8E5D-7707067CF9C7}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_6"/>
     <ROW Component="DocumentFormat.OpenXml.dll_7" ComponentId="{8D23AAEF-CCE8-4787-8E50-F2E62E9E7AE3}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_7"/>
+    <ROW Component="DocumentFormat.OpenXml.dll_8" ComponentId="{FD39DE03-41D8-42D9-A0F4-075FD7D950DC}" Directory_="ExportSchedule_8_Dir" Attributes="0" KeyPath="DocumentFormat.OpenXml.dll_8"/>
     <ROW Component="ExcelNumberFormat.dll" ComponentId="{AA253FB0-CFC1-4251-8AFC-596BE82CCC15}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll"/>
     <ROW Component="ExcelNumberFormat.dll_1" ComponentId="{E7B0172C-AA66-4F99-AD01-54EFC7A16048}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_1"/>
     <ROW Component="ExcelNumberFormat.dll_2" ComponentId="{5FDF603A-47CB-42DC-A85A-FC560CFE08A1}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_2"/>
@@ -89,6 +95,7 @@
     <ROW Component="ExcelNumberFormat.dll_5" ComponentId="{E1D5D295-15F8-4869-B43C-321D676036FE}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_5"/>
     <ROW Component="ExcelNumberFormat.dll_6" ComponentId="{383D9F92-D4E4-4A56-B041-7A0D46E2F1B8}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_6"/>
     <ROW Component="ExcelNumberFormat.dll_7" ComponentId="{0492CD29-6746-45DF-9EE4-359DEDC8AB07}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_7"/>
+    <ROW Component="ExcelNumberFormat.dll_8" ComponentId="{10F2AF59-8EE7-490C-A8DF-42F0A2610CB1}" Directory_="ExportSchedule_8_Dir" Attributes="0" KeyPath="ExcelNumberFormat.dll_8"/>
     <ROW Component="ExportSchedule.addin" ComponentId="{E35D2D66-3DAF-4E4C-A7DF-FD66BDE333A9}" Directory_="__3_Dir" Attributes="0" KeyPath="ExportSchedule.addin" Type="0"/>
     <ROW Component="ExportSchedule.addin_1" ComponentId="{D40CF210-807A-4224-B15F-2FBF8FDD09D0}" Directory_="__2_Dir" Attributes="0" KeyPath="ExportSchedule.addin_1" Type="0"/>
     <ROW Component="ExportSchedule.addin_2" ComponentId="{8DAB7B29-9131-4C67-B550-E585A17B4B76}" Directory_="__1_Dir" Attributes="0" KeyPath="ExportSchedule.addin_2" Type="0"/>
@@ -97,8 +104,10 @@
     <ROW Component="ExportSchedule.addin_5" ComponentId="{1FBAFC2E-E18C-43DF-A0F5-40A19ABE03E1}" Directory_="__5_Dir" Attributes="0" KeyPath="ExportSchedule.addin_5" Type="0"/>
     <ROW Component="ExportSchedule.addin_6" ComponentId="{DDB9D2FF-0A51-4325-B8DD-C24B60FA937E}" Directory_="__6_Dir" Attributes="0" KeyPath="ExportSchedule.addin_6" Type="0"/>
     <ROW Component="ExportSchedule.addin_7" ComponentId="{6F27D44C-F015-49B4-9F5D-4DE9EC9B2E67}" Directory_="__7_Dir" Attributes="0" KeyPath="ExportSchedule.addin_7" Type="0"/>
+    <ROW Component="ExportSchedule.addin_8" ComponentId="{1D21700A-689D-4672-A61A-8646FBFAFCD6}" Directory_="__8_Dir" Attributes="0" KeyPath="ExportSchedule.addin_8" Type="0"/>
     <ROW Component="ExportSchedule.deps.json" ComponentId="{30DBBF9A-F518-4222-8EA2-23C84D1FEE0F}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="ExportSchedule.deps.json" Type="0"/>
     <ROW Component="ExportSchedule.deps.json_1" ComponentId="{77CBACC4-AD6F-429E-A375-6CE68929AAEB}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="ExportSchedule.deps.json_1" Type="0"/>
+    <ROW Component="ExportSchedule.deps.json_2" ComponentId="{061FE24F-AAEE-4228-9225-358A4A4FDB35}" Directory_="ExportSchedule_8_Dir" Attributes="0" KeyPath="ExportSchedule.deps.json_2" Type="0"/>
     <ROW Component="ExportSchedule.dll" ComponentId="{3B53249F-0030-4724-8509-64E23E3A818E}" Directory_="ExportSchedule_Dir" Attributes="256" KeyPath="ExportSchedule.dll"/>
     <ROW Component="ExportSchedule.dll_1" ComponentId="{EF5ED985-2D52-441D-A972-31259C5D3630}" Directory_="ExportSchedule_1_Dir" Attributes="256" KeyPath="ExportSchedule.dll_1"/>
     <ROW Component="ExportSchedule.dll_2" ComponentId="{E0E57481-1A20-4EA3-BAFE-3DC9B38CCF71}" Directory_="ExportSchedule_2_Dir" Attributes="256" KeyPath="ExportSchedule.dll_2"/>
@@ -107,6 +116,7 @@
     <ROW Component="ExportSchedule.dll_5" ComponentId="{F36D4C02-445E-4F44-AA0F-A7F0CCCE8975}" Directory_="ExportSchedule_5_Dir" Attributes="256" KeyPath="ExportSchedule.dll_5"/>
     <ROW Component="ExportSchedule.dll_6" ComponentId="{AE06EF58-3509-4D5B-BA8F-04E0FAD6E3C8}" Directory_="ExportSchedule_6_Dir" Attributes="256" KeyPath="ExportSchedule.dll_6"/>
     <ROW Component="ExportSchedule.dll_7" ComponentId="{702FA10B-346F-40DC-A679-CA9E284D10BD}" Directory_="ExportSchedule_7_Dir" Attributes="256" KeyPath="ExportSchedule.dll_7"/>
+    <ROW Component="ExportSchedule.dll_8" ComponentId="{3F6C2B35-DF11-4A91-BF80-5D395620063F}" Directory_="ExportSchedule_8_Dir" Attributes="256" KeyPath="ExportSchedule.dll_8"/>
     <ROW Component="Microsoft.Bcl.HashCode.dll" ComponentId="{C464FFA2-6FB1-4B68-9DD5-1B5C79D8150C}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="Microsoft.Bcl.HashCode.dll"/>
     <ROW Component="Microsoft.Bcl.HashCode.dll_1" ComponentId="{90DA13BF-7273-4D06-AA7E-1EED00F7B62C}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="Microsoft.Bcl.HashCode.dll_1"/>
     <ROW Component="Microsoft.Bcl.HashCode.dll_2" ComponentId="{C031B104-7831-4C18-97BB-97B0AEB174B8}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="Microsoft.Bcl.HashCode.dll_2"/>
@@ -123,6 +133,7 @@
     <ROW Component="RBush.dll_5" ComponentId="{78D98ECE-F7B7-4B18-BD4D-65655D8EF600}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="RBush.dll_5"/>
     <ROW Component="RBush.dll_6" ComponentId="{B4C9012F-518B-4A74-9C77-49CC14035631}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="RBush.dll_6"/>
     <ROW Component="RBush.dll_7" ComponentId="{A36498A8-9F4B-4B4F-AC8D-235CA76EAC55}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="RBush.dll_7"/>
+    <ROW Component="RBush.dll_8" ComponentId="{6A8DB1DC-CC93-4B8B-B177-816B2EEEAB85}" Directory_="ExportSchedule_8_Dir" Attributes="0" KeyPath="RBush.dll_8"/>
     <ROW Component="SixLabors.Fonts.dll" ComponentId="{60E04771-C3E7-42E7-8881-0DACBEA0470F}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll"/>
     <ROW Component="SixLabors.Fonts.dll_1" ComponentId="{9DC28020-6513-420C-AF35-C070E7BDB423}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_1"/>
     <ROW Component="SixLabors.Fonts.dll_2" ComponentId="{494DA287-761C-4F28-BD40-D5E3BE6E178C}" Directory_="ExportSchedule_1_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_2"/>
@@ -131,6 +142,7 @@
     <ROW Component="SixLabors.Fonts.dll_5" ComponentId="{3E7E4808-8A26-4039-AB6E-CD89348ABCF9}" Directory_="ExportSchedule_4_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_5"/>
     <ROW Component="SixLabors.Fonts.dll_6" ComponentId="{35577988-849F-4EA2-B953-5692C94CDB3B}" Directory_="ExportSchedule_5_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_6"/>
     <ROW Component="SixLabors.Fonts.dll_7" ComponentId="{EF3F806E-3402-4318-AF77-0E59FE419484}" Directory_="ExportSchedule_7_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_7"/>
+    <ROW Component="SixLabors.Fonts.dll_8" ComponentId="{85EC0DF3-8E07-4184-95CF-DE6B88054FFE}" Directory_="ExportSchedule_8_Dir" Attributes="0" KeyPath="SixLabors.Fonts.dll_8"/>
     <ROW Component="System.AppContext.dll" ComponentId="{A3D47201-363F-45BA-BBDC-977C84E4F7D2}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.AppContext.dll"/>
     <ROW Component="System.Buffers.dll" ComponentId="{5A3C3DAD-9146-4F13-ABEC-E0857F42BD4F}" Directory_="ExportSchedule_6_Dir" Attributes="0" KeyPath="System.Buffers.dll"/>
     <ROW Component="System.Buffers.dll_1" ComponentId="{F97AF652-0B41-42A4-B005-C3730D19043F}" Directory_="ExportSchedule_Dir" Attributes="0" KeyPath="System.Buffers.dll_1"/>
@@ -484,6 +496,16 @@
     <ROW File="RBush.dll_7" Component_="RBush.dll_7" FileName="RBush.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\RBush.dll" SelfReg="false"/>
     <ROW File="SixLabors.Fonts.dll_7" Component_="SixLabors.Fonts.dll_7" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\SixLabors.Fonts.dll" SelfReg="false"/>
     <ROW File="System.IO.Packaging.dll_1" Component_="System.IO.Packaging.dll_1" FileName="SYSTEM~3.DLL|System.IO.Packaging.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R26\System.IO.Packaging.dll" SelfReg="false"/>
+    <ROW File="ExportSchedule.addin_8" Component_="ExportSchedule.addin_8" FileName="EXPORT~1.ADD|ExportSchedule.addin" Attributes="0" SourcePath="..\ExportSchedule\ExportSchedule.addin" SelfReg="false"/>
+    <ROW File="ClosedXML.dll_8" Component_="ClosedXML.dll_8" FileName="CLOSED~1.DLL|ClosedXML.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R27\ClosedXML.dll" SelfReg="false"/>
+    <ROW File="ClosedXML.Parser.dll_8" Component_="ClosedXML.Parser.dll_8" FileName="CLOSED~2.DLL|ClosedXML.Parser.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R27\ClosedXML.Parser.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.dll_8" Component_="DocumentFormat.OpenXml.dll_8" FileName="DOCUME~1.DLL|DocumentFormat.OpenXml.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R27\DocumentFormat.OpenXml.dll" SelfReg="false"/>
+    <ROW File="DocumentFormat.OpenXml.Framework.dll_8" Component_="DocumentFormat.OpenXml.Framework.dll_8" FileName="DOCUME~2.DLL|DocumentFormat.OpenXml.Framework.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R27\DocumentFormat.OpenXml.Framework.dll" SelfReg="false"/>
+    <ROW File="ExcelNumberFormat.dll_8" Component_="ExcelNumberFormat.dll_8" FileName="EXCELN~1.DLL|ExcelNumberFormat.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R27\ExcelNumberFormat.dll" SelfReg="false"/>
+    <ROW File="ExportSchedule.deps.json_2" Component_="ExportSchedule.deps.json_2" FileName="EXPORT~1.JSO|ExportSchedule.deps.json" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R27\ExportSchedule.deps.json" SelfReg="false"/>
+    <ROW File="ExportSchedule.dll_8" Component_="ExportSchedule.dll_8" FileName="EXPORT~1.DLL|ExportSchedule.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R27\ExportSchedule.dll" SelfReg="false"/>
+    <ROW File="RBush.dll_8" Component_="RBush.dll_8" FileName="RBush.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R27\RBush.dll" SelfReg="false"/>
+    <ROW File="SixLabors.Fonts.dll_8" Component_="SixLabors.Fonts.dll_8" FileName="SIXLAB~1.DLL|SixLabors.Fonts.dll" Attributes="0" SourcePath="..\ExportSchedule\bin\Release R27\SixLabors.Fonts.dll" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -789,6 +811,16 @@
     <ROW Feature_="MainFeature" Component_="RBush.dll_7"/>
     <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll_7"/>
     <ROW Feature_="MainFeature" Component_="System.IO.Packaging.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="ExportSchedule.addin_8"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="ClosedXML.Parser.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="DocumentFormat.OpenXml.Framework.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="ExcelNumberFormat.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="ExportSchedule.deps.json_2"/>
+    <ROW Feature_="MainFeature" Component_="ExportSchedule.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="RBush.dll_8"/>
+    <ROW Feature_="MainFeature" Component_="SixLabors.Fonts.dll_8"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="ExportSchedule.exe" SourcePath="..\ExportSchedule\ExportSchedule.ico" Index="0"/>

@@ -27,11 +27,7 @@ partial class Build
 
     IEnumerable<string> GlobBuildConfigurations()
     {
-        var configurations = Solution.Configurations
-            .Select(pair => pair.Key)
-            .Select(config => config.Remove(config.LastIndexOf('|')))
-            .Distinct()
-            .ToList();
+        var configurations = Solution.GetModel().BuildTypes;
 
         return configurations;
     }

@@ -1,4 +1,4 @@
 {
   "$schema": "./build.schema.json",
-  "Solution": "ExportSchedule.sln"
+  "Solution": "ExportSchedule.slnx"
 }

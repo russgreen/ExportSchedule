@@ -1,9 +1,9 @@
-using Nuke.Common;
-using Nuke.Common.Git;
-using Nuke.Common.IO;
-using Nuke.Common.ProjectModel;
+using Fallout.Common;
+using Fallout.Common.Git;
+using Fallout.Common.IO;
+using Fallout.Solutions;
 
-partial class Build : NukeBuild
+partial class Build : FalloutBuild
 {
     readonly AbsolutePath ArtifactsDirectory = RootDirectory / "output";
 

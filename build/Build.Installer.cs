@@ -1,11 +1,11 @@
-﻿using Nuke.Common;
+using Fallout.Common;
 using Serilog;
 using System.Diagnostics;
 using System.IO;
 using System;
-using Nuke.Common.ProjectModel;
+using Fallout.Solutions;
 using System.Linq;
-using Nuke.Common.Git;
+using Fallout.Common.Git;
 
 partial class Build
 {
